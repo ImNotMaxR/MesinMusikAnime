@@ -5,6 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Princess Kaguya</title>
+
+    <script>
+        // Monkey-patch Canvas to apply dynamic theme to visualizer
+        (function () {
+            const originalFill = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, 'fillStyle');
+            const originalStroke = Object.getOwnPropertyDescriptor(CanvasRenderingContext2D.prototype, 'strokeStyle');
+
+            function getVisualizerGradient(ctx, originalColor) {
+                const root = getComputedStyle(document.documentElement);
+                const rgb1 = root.getPropertyValue('--main-color-rgb').trim();
+                const rgb2 = root.getPropertyValue('--sec-color-rgb').trim();
+
+                if (!rgb1) return originalColor;
+
+                let alpha = '1';
+                if (typeof originalColor === 'string' && originalColor.startsWith('rgba')) {
+                    const alphaMatch = originalColor.match(/rgba\([^,]+,[^,]+,[^,]+,\s*([^)]+)\)/);
+                    if (alphaMatch) {
+                        alpha = alphaMatch[1];
+                        // Boost opacity for vibrant colors to pop more
+                        alpha = Math.min(1, parseFloat(alpha) * 1.5).toFixed(2);
+                    }
+                }
+
+                // If we don't have a secondary color, fallback to solid primary
+                if (!rgb2) return `rgba(${rgb1}, ${alpha})`;
+
+                // Create gradient from bottom (color1) to top (color2)
+                const grad = ctx.createLinearGradient(0, ctx.canvas.height, 0, 0);
+                grad.addColorStop(0, `rgba(${rgb1}, ${alpha})`);
+                grad.addColorStop(1, `rgba(${rgb2}, ${alpha})`);
+                return grad;
+            }
+
+            Object.defineProperty(CanvasRenderingContext2D.prototype, 'fillStyle', {
+                get: function () { return originalFill.get.call(this); },
+                set: function (val) {
+                    if (this.canvas && this.canvas.id === 'visualizer') {
+                        val = getVisualizerGradient(this, val);
+                    }
+                    originalFill.set.call(this, val);
+                }
+            });
+
+            Object.defineProperty(CanvasRenderingContext2D.prototype, 'strokeStyle', {
+                get: function () { return originalStroke.get.call(this); },
+                set: function (val) {
+                    if (this.canvas && this.canvas.id === 'visualizer') {
+                        val = getVisualizerGradient(this, val);
+                    }
+                    originalStroke.set.call(this, val);
+                }
+            });
+        })();
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -547,11 +603,10 @@
                 const bulan = bulanIndo[now.getMonth()];
                 const tahun = now.getFullYear();
 
-                // Recommended beautiful format: HARI, DD BULAN YYYY
-                const formattedDate = `${hari}, ${tanggal} ${bulan} ${tahun}`;
+                const formattedDateHTML = `${hari}, ${tanggal} ${bulan}<br><span style="font-size: 0.8em">${tahun}</span>`;
 
-                if (dateEl.innerText !== formattedDate) {
-                    dateEl.innerText = formattedDate;
+                if (dateEl.innerHTML !== formattedDateHTML) {
+                    dateEl.innerHTML = formattedDateHTML;
                 }
             }
 
@@ -579,60 +634,87 @@
         })();
 
         // Custom Script for Dynamic Theming
-        (function() {
-            function getDominantColor(imgEl) {
+        (function () {
+            function getDominantColors(el) {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
-                
+
                 // Downscale for performance
                 const maxDim = 100;
-                let width = imgEl.naturalWidth || imgEl.width;
-                let height = imgEl.naturalHeight || imgEl.height;
+                let width = el.naturalWidth || el.videoWidth || el.width;
+                let height = el.naturalHeight || el.videoHeight || el.height;
                 if (!width || !height) return null;
-                
+
                 if (width > maxDim || height > maxDim) {
                     const ratio = Math.min(maxDim / width, maxDim / height);
                     width = Math.floor(width * ratio);
                     height = Math.floor(height * ratio);
                 }
-                
+
                 canvas.width = width;
                 canvas.height = height;
-                ctx.drawImage(imgEl, 0, 0, width, height);
-                
+                ctx.drawImage(el, 0, 0, width, height);
+
                 let data;
                 try {
                     data = ctx.getImageData(0, 0, width, height).data;
-                } catch(e) {
+                } catch (e) {
                     return null;
                 }
-                
-                let r = 0, g = 0, b = 0, count = 0;
-                for (let i = 0; i < data.length; i += 4) {
-                    // Ignore highly transparent pixels or too dark/light pixels
+
+                let pixels = [];
+                // Sample pixels for speed (step by 16 means every 4th pixel)
+                for (let i = 0; i < data.length; i += 16) {
+                    // Ignore highly transparent pixels
                     if (data[i + 3] > 128) {
-                        r += data[i];
-                        g += data[i + 1];
-                        b += data[i + 2];
-                        count++;
+                        pixels.push({ r: data[i], g: data[i + 1], b: data[i + 2] });
                     }
                 }
-                
-                if (count === 0) return null;
-                r = Math.floor(r / count);
-                g = Math.floor(g / count);
-                b = Math.floor(b / count);
-                
-                return boostSaturation(r, g, b);
+
+                if (pixels.length === 0) return null;
+
+                // K-Means clustering (k=2) to find two dominant colors
+                let c1 = pixels[0];
+                let c2 = pixels[pixels.length - 1];
+                let count1 = 0, count2 = 0;
+
+                for (let iter = 0; iter < 4; iter++) {
+                    let s1 = { r: 0, g: 0, b: 0, c: 0 };
+                    let s2 = { r: 0, g: 0, b: 0, c: 0 };
+
+                    for (let p of pixels) {
+                        let d1 = Math.abs(p.r - c1.r) + Math.abs(p.g - c1.g) + Math.abs(p.b - c1.b);
+                        let d2 = Math.abs(p.r - c2.r) + Math.abs(p.g - c2.g) + Math.abs(p.b - c2.b);
+                        if (d1 < d2) { s1.r += p.r; s1.g += p.g; s1.b += p.b; s1.c++; }
+                        else { s2.r += p.r; s2.g += p.g; s2.b += p.b; s2.c++; }
+                    }
+                    if (s1.c) c1 = { r: Math.floor(s1.r / s1.c), g: Math.floor(s1.g / s1.c), b: Math.floor(s1.b / s1.c) };
+                    if (s2.c) c2 = { r: Math.floor(s2.r / s2.c), g: Math.floor(s2.g / s2.c), b: Math.floor(s2.b / s2.c) };
+                    count1 = s1.c;
+                    count2 = s2.c;
+                }
+
+                // Sort by dominance
+                let main = count1 > count2 ? c1 : c2;
+                let sec = count1 > count2 ? c2 : c1;
+
+                // Check if they are too similar
+                let dist = Math.abs(main.r - sec.r) + Math.abs(main.g - sec.g) + Math.abs(main.b - sec.b);
+                let isSimilar = dist < 50;
+
+                return {
+                    primary: boostSaturation(main.r, main.g, main.b, false),
+                    secondary: boostSaturation(sec.r, sec.g, sec.b, isSimilar)
+                };
             }
-            
-            function boostSaturation(r, g, b) {
+
+            function boostSaturation(r, g, b, shiftHue = false) {
                 let r1 = r / 255, g1 = g / 255, b1 = b / 255;
                 let max = Math.max(r1, g1, b1), min = Math.min(r1, g1, b1);
                 let h, s, l = (max + min) / 2;
 
                 if (max === min) {
-                    h = s = 0; 
+                    h = s = 0;
                 } else {
                     let d = max - min;
                     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
@@ -643,61 +725,76 @@
                     }
                     h /= 6;
                 }
-                
+
+                if (shiftHue) {
+                    // If secondary color is too similar, shift its hue to create a nice gradient effect
+                    h = (h + 0.15) % 1;
+                }
+
                 // Boost saturation for a solid, colorful theme (avoid grays)
                 if (s > 0) {
                     s = Math.max(0.65, Math.min(s * 1.5, 0.95));
                 }
-                
-                // Clamp lightness to ensure good contrast and visibility
-                l = Math.max(0.4, Math.min(l, 0.7));
+
+                // Clamp lightness to ensure good contrast and visibility, darkened by ~10%
+                l = Math.max(0.35, Math.min(l * 0.9, 0.65));
 
                 let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
                 let p = 2 * l - q;
-                
+
                 function hue2rgb(p, q, t) {
-                    if(t < 0) t += 1;
-                    if(t > 1) t -= 1;
-                    if(t < 1/6) return p + (q - p) * 6 * t;
-                    if(t < 1/2) return q;
-                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    if (t < 0) t += 1;
+                    if (t > 1) t -= 1;
+                    if (t < 1 / 6) return p + (q - p) * 6 * t;
+                    if (t < 1 / 2) return q;
+                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
                     return p;
                 }
-                
+
                 return {
-                    r: Math.round(hue2rgb(p, q, h + 1/3) * 255),
+                    r: Math.round(hue2rgb(p, q, h + 1 / 3) * 255),
                     g: Math.round(hue2rgb(p, q, h) * 255),
-                    b: Math.round(hue2rgb(p, q, h - 1/3) * 255)
+                    b: Math.round(hue2rgb(p, q, h - 1 / 3) * 255)
                 };
+            }
+
+            function extractAndSetColor(el) {
+                const colors = getDominantColors(el);
+                if (colors && colors.primary) {
+                    const p = colors.primary;
+                    const hex = "#" + (1 << 24 | p.r << 16 | p.g << 8 | p.b).toString(16).slice(1);
+                    document.documentElement.style.setProperty('--main-color', hex);
+                    document.documentElement.style.setProperty('--main-color-rgb', `${p.r}, ${p.g}, ${p.b}`);
+
+                    if (colors.secondary) {
+                        const s = colors.secondary;
+                        document.documentElement.style.setProperty('--sec-color-rgb', `${s.r}, ${s.g}, ${s.b}`);
+                    }
+                }
             }
 
             function applyThemeFromImageUrl(url) {
                 if (!url) return;
                 const cleanUrl = url.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
                 if (!cleanUrl || cleanUrl === 'none') return;
-                
+
                 const img = new Image();
                 img.crossOrigin = "Anonymous";
-                img.onload = function() {
-                    const color = getDominantColor(img);
-                    if (color) {
-                        const hex = "#" + (1 << 24 | color.r << 16 | color.g << 8 | color.b).toString(16).slice(1);
-                        document.documentElement.style.setProperty('--main-color', hex);
-                        document.documentElement.style.setProperty('--main-color-rgb', `${color.r}, ${color.g}, ${color.b}`);
-                    }
+                img.onload = function () {
+                    extractAndSetColor(img);
                 };
                 img.src = cleanUrl;
             }
 
             let lastUrl = '';
-            
+
             function checkActiveBackground() {
                 let imageUrl = '';
                 const activeLayer = document.querySelector('.bg-layer.active');
                 if (activeLayer && activeLayer.style.backgroundImage && activeLayer.style.backgroundImage !== 'none') {
                     imageUrl = activeLayer.style.backgroundImage;
                 }
-                
+
                 // Fallback to cover image if background is video or empty
                 if (!imageUrl) {
                     const coverImg = document.getElementById('cover-img');
@@ -705,7 +802,7 @@
                         imageUrl = coverImg.src;
                     }
                 }
-                
+
                 if (imageUrl && imageUrl !== lastUrl) {
                     lastUrl = imageUrl;
                     applyThemeFromImageUrl(imageUrl);
@@ -719,11 +816,11 @@
                 const layer2 = document.getElementById('bg-layer-2');
                 const coverImg = document.getElementById('cover-img');
                 const config = { attributes: true, attributeFilter: ['class', 'style', 'src'] };
-                
+
                 if (layer1) observer.observe(layer1, config);
                 if (layer2) observer.observe(layer2, config);
                 if (coverImg) observer.observe(coverImg, config);
-                
+
                 setTimeout(checkActiveBackground, 500);
             });
         })();

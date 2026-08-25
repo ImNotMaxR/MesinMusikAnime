@@ -359,5 +359,24 @@
       "ja": "subtitle/Shinkai.srt",
       "ko": "subtitle/Shinkai.srt"
     }
+  },
+  {
+    "title": {
+      "ja": "ファイアダンス",
+      "ko": "파이어댄스"
+    },
+    "artist": {
+      "ja": "Vivid BAD SQUAD | バーチャル・シンガー",
+      "ko": "Vivid BAD SQUAD | 버추얼・싱어"
+    },
+    "musicFile": "music/ファイアダンス.mp3",
+    "coverImage": "cover/fire_dance.png",
+    "default": true,
+    "default_bg": 39,
+    "mv": "mv/ファイアダンス.webm",
+    "subtitle": {
+      "ja": "subtitle/FireDance.srt",
+      "ko": "subtitle/FireDance.srt"
+    }
   }
 ]
