@@ -1,0 +1,86 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "This wallpaper is designed for 16:9 aspect ratios. For 21:9 displays, please download the 21:9 version.\nCosmic Princess Kaguya!\nChou Kaguya-hime!\n초 카구야 공주!\n초 가구야 공주!\n超かぐや姫！",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"audio_sensitivity" : 
+			{
+				"index" : 5,
+				"max" : 1.5,
+				"min" : 0.5,
+				"order" : 105,
+				"step" : 0.1,
+				"text" : "Audio Sensitivity",
+				"type" : "slider",
+				"value" : 1
+			},
+			"bg_mouse_sensitivity" : 
+			{
+				"index" : 1,
+				"max" : 3,
+				"min" : 0.1,
+				"order" : 101,
+				"step" : 0.1,
+				"text" : "Mouse Animation Sensitivity",
+				"type" : "slider",
+				"value" : 1
+			},
+			"custom_user_bg" : 
+			{
+				"filter" : "*.jpg|*.png|*.jpeg|*.webp",
+				"index" : 0,
+				"order" : 100,
+				"text" : "Custom BG Image",
+				"type" : "file"
+			},
+			"playback_rate" : 
+			{
+				"index" : 2,
+				"max" : 2,
+				"min" : 0.25,
+				"order" : 102,
+				"step" : 0.25,
+				"text" : "Playback Speed",
+				"type" : "slider",
+				"value" : 1
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.7529411764705882 0.7529411764705882 0.7529411764705882"
+			},
+			"text_color" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "Text Color",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"visualizer_color" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Visualizer Color",
+				"type" : "color",
+				"value" : "1 1 1"
+			}
+		}
+	},
+	"oversized" : true,
+	"preview" : "preview.jpg",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"tags" : [ "Anime" ],
+	"title" : "[16:9] 超かぐや姫 All-in-One",
+	"type" : "web",
+	"version" : 2,
+	"visibility" : "public",
+	"workshopid" : "3679122549",
+	"workshopurl" : "steam://url/CommunityFilePage/3679122549"
+}
