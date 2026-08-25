@@ -1,259 +1,259 @@
-﻿1
+1
 00:00:22,321 --> 00:00:25,490
-헤어졌던 것은 훨씬
+owakare shita no wa motto
 
 2
 00:00:25,490 --> 00:00:28,938
-오래전 일인 것처럼
+mae no koto datta you na
 
 3
 00:00:28,938 --> 00:00:32,564
-슬픈 빛은 봉해놓고
+kanashii hikari wa fuujikomete
 
 4
 00:00:32,564 --> 00:00:36,092
-신발 뒤꿈치가 닳도록 걸었어
+kakato suriherashitanda
 
 5
 00:00:36,885 --> 00:00:40,053
-너와 있던 날엔 보였지만
+kimi to ita toki wa mieta
 
 6
 00:00:40,053 --> 00:00:43,463
-지금은 보이지 않게 된
+ima wa mienakunatta
 
 7
 00:00:43,463 --> 00:00:47,027
-투명한 혜성을 멍하니,
+toumei na suisei o bonyari to
 
 8
 00:00:47,027 --> 00:00:50,552
-하지만 그것만을 찾고 있어
+demo sore dake sagashiteiru
 
 9
 00:00:50,552 --> 00:00:54,096
-늘 노래를 불렀어
+shotchuu uta o utatta yo
 
 10
 00:00:54,096 --> 00:00:57,904
-그 시절만의 멜로디를
+sono toki dake no merodii o
 
 11
 00:00:57,904 --> 00:01:01,349
-쓸쓸하진 않았어
+sabishiku nanka nakatta yo
 
 12
 00:01:01,349 --> 00:01:05,493
-제대로 쓸쓸할 수 있었으니까
+chanto sabishiku nareta kara
 
 13
 00:01:05,493 --> 00:01:09,029
-언제까지, 어디까지라든가
+itsu made doko made nante
 
 14
 00:01:09,029 --> 00:01:12,710
-정상인지, 비정상인지 따위는
+seijou ka ijou ka nante
 
 15
 00:01:12,710 --> 00:01:16,067
-생각할 틈도 없을 정도로
+kangaeru hima mo nai hodo
 
 16
 00:01:16,067 --> 00:01:19,997
-걷는 것은 힘들어
+aruku no wa taihen da
 
 17
 00:01:19,997 --> 00:01:23,518
-즐거운 편이 훨씬 좋잖아
+tanoshii hou ga zutto ii yo
 
 18
 00:01:23,518 --> 00:01:27,299
-모르는 척 웃으며 가자
+gomakashite waratteiku yo
 
 19
 00:01:27,299 --> 00:01:28,885
-괜찮을 거야
+daijoubu da
 
 20
 00:01:28,885 --> 00:01:30,696
-그 고통은
+ano itami wa
 
 21
 00:01:30,696 --> 00:01:35,076
-잊는대도 사라지지 않아
+wasuretatte kieyashinai
 
 22
 00:01:35,076 --> 00:01:38,182
-이상으로 만들었던 길을
+risou de tsukutta michi o
 
 23
 00:01:38,182 --> 00:01:41,639
-현실이 덧칠해 나가지만
+genjitsu ga nurikaeteiku yo
 
 24
 00:01:41,639 --> 00:01:45,219
-추억은 그 궤적 위에
+omoide wa sono kiseki no ue de
 
 25
 00:01:45,219 --> 00:01:48,868
-반짝임이 되어 남아 있어
+kagayaki ni natte nokotteiru
 
 26
 00:01:49,505 --> 00:01:52,744
-헤어졌던 것은 어째서
+owakare shita no wa nande
 
 27
 00:01:52,744 --> 00:01:56,126
-무엇 때문이었을까
+nan no tame dattan darou na
 
 28
 00:01:56,126 --> 00:01:59,746
-슬픈 빛이 나의 그림자를
+kanashii hikari ga boku no kage o
 
 29
 00:01:59,746 --> 00:02:03,381
-앞으로 길게 드리우고 있어
+mae ni nagaku nobashiteiru
 
 30
 00:02:03,381 --> 00:02:06,790
-이따금씩 열이 나곤 해
+tokidoki netsu ga deru yo
 
 31
 00:02:06,790 --> 00:02:10,655
-시간이 있을 땐 잠들곤 해
+jikan ga aru toki nemuru yo
 
 32
 00:02:10,655 --> 00:02:14,086
-꿈이란 걸 느끼는 그 속에서
+yume da to wakaru sono naka de
 
 33
 00:02:14,086 --> 00:02:18,078
-너를 만나고서 다시 나아갈래
+kimi to atte kara mata ikou
 
 34
 00:02:18,078 --> 00:02:21,747
-활짝 갠 하늘과는 동떨어진
+seiten to wa hodo tooi
 
 35
 00:02:21,747 --> 00:02:25,405
-끝없는 어둠에서도
+owaranai kurayami ni mo
 
 36
 00:02:25,405 --> 00:02:28,811
-별을 떠올릴 수만 있다면
+hoshi o omoiukabeta nara
 
 37
 00:02:28,811 --> 00:02:31,880
-그게 은하 안에 있는 거잖아
+sugu ginga no naka da
 
 38
 00:02:32,726 --> 00:02:36,309
-그다지 울지 않게 되어도
+anmari nakanakunatte mo
 
 39
 00:02:36,309 --> 00:02:39,953
-신발을 새로 마련해도
+kutsu o atarashiku shite mo
 
 40
 00:02:39,953 --> 00:02:41,505
-괜찮을 거야
+daijoubu da
 
 41
 00:02:41,505 --> 00:02:43,409
-그 고통은
+ano itami wa
 
 42
 00:02:43,409 --> 00:02:47,240
-잊는대도 사라지지 않아
+wasuretatte kieyashinai
 
 43
 00:02:47,240 --> 00:02:50,032
-전하고 싶었던 말이
+tsutaetakatta koto ga
 
 44
 00:02:50,032 --> 00:02:53,855
-분명 있었겠지
+kitto attan darou na
 
 45
 00:02:54,574 --> 00:02:59,482
-아마도 뻔한 거겠지만
+osoraku arikitari nan darou kedo
 
 46
 00:02:59,482 --> 00:03:02,258
-이렇게도
+konna ni mo
 
 47
 00:03:16,191 --> 00:03:19,640
-헤어진다는 건
+owakare shita koto wa
 
 48
 00:03:19,640 --> 00:03:23,479
-만남과도 이어져 있어
+deatta koto to tsunagatteiru
 
 49
 00:03:23,479 --> 00:03:26,877
-저 투명한 혜성은
+ano toumei na suisei wa
 
 50
 00:03:26,877 --> 00:03:30,840
-투명하니까 사리지지 않아
+toumei dakara nakunaranai
 
 51
 00:03:30,840 --> 00:03:32,614
-◯×△
+maru batsu sankaku
 
 52
 00:03:32,614 --> 00:03:34,588
-어느 쪽인지
+doreka nante
 
 53
 00:03:34,588 --> 00:03:38,238
-남들과 비교해서 어떻다라든지
+minna to kurabete douka nante
 
 54
 00:03:38,238 --> 00:03:41,587
-알아볼 틈도 없을 정도로
+tashikameru ma mo nai hodo
 
 55
 00:03:41,587 --> 00:03:45,451
-살아간다는 건 최고잖아
+ikiru no wa saikou da
 
 56
 00:03:45,451 --> 00:03:48,991
-예전만큼 울지 않더라도
+anmari nakanakunatte mo
 
 57
 00:03:48,991 --> 00:03:52,730
-모르는 척 웃으며 가자
+gomakashite waratteiku yo
 
 58
 00:03:52,730 --> 00:03:54,372
-괜찮을 거야
+daijoubu da
 
 59
 00:03:54,372 --> 00:03:56,098
-그 고통은
+ano itami wa
 
 60
 00:03:56,098 --> 00:03:59,932
-잊는대도 사라지지 않아
+wasuretatte kieyashinai
 
 61
 00:03:59,932 --> 00:04:01,597
-괜찮을 거야
+daijoubu da
 
 62
 00:04:01,597 --> 00:04:03,513
-이 빛의
+kono hikari no
 
 63
 00:04:03,513 --> 00:04:06,842
-시작에는…
+hajimari ni wa...
 
 64
 00:04:06,842 --> 00:04:11,096
-네가 있어
+kimi ga iru
 
 65
 00:04:25,779 --> 00:04:57,978
-<a href="https://youtu.be/3mHbWV-5VeM?si=JZ4WNvIu2WPiZoyj">MV: あきねこ (@AKINeCO916)</a>
+<a href="https://youtu.be/3mHbWV-5VeM?si=JZ4WNvIu2WPiZoyj">MV: Akineco (@AKINeCO916)</a>

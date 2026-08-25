@@ -1,0 +1,251 @@
+1
+00:00:04,000 --> 00:00:07,000
+Tobenai tori no sairen
+
+2
+00:00:07,600 --> 00:00:11,000
+Shigarami kamikudaite
+
+3
+00:00:12,700 --> 00:00:13,500
+Let's go
+
+4
+00:00:13,500 --> 00:00:18,200
+Stay Kyou ga saitei no meinichi
+
+5
+00:00:18,400 --> 00:00:21,200
+Suterareru karimono no meijitsu
+
+6
+00:00:21,200 --> 00:00:23,000
+Hourou nige no gensou
+
+7
+00:00:23,000 --> 00:00:25,100
+Kokou daitokai no kensou
+
+8
+00:00:25,100 --> 00:00:27,200
+Lag no nai raku mo nai
+
+9
+00:00:27,200 --> 00:00:28,500
+Bibirazu Fight
+
+10
+00:00:28,500 --> 00:00:31,000
+Kore ga aidentitii
+
+11
+00:00:31,000 --> 00:00:32,900
+Baimei City
+
+12
+00:00:32,900 --> 00:00:36,300
+nanana Nantodemo nanana
+
+13
+00:00:36,500 --> 00:00:38,700
+Taigen shi ni
+
+14
+00:00:38,700 --> 00:00:40,700
+Wait a minute
+
+15
+00:00:40,700 --> 00:00:43,500
+Jinsei no kaisei no turn
+
+16
+00:00:43,500 --> 00:00:46,500
+Dare ni de mo aru no daro?
+
+17
+00:00:46,500 --> 00:00:48,500
+Toose ga wo
+
+18
+00:00:48,500 --> 00:00:50,900
+Tobenai tori no sairen
+
+19
+00:00:50,900 --> 00:00:52,300
+(Woo)
+
+20
+00:00:52,300 --> 00:00:55,000
+Shizuka ni kago kudaite
+
+21
+00:00:55,000 --> 00:00:59,500
+Odore kono yoru made arageru koe de
+
+22
+00:00:59,500 --> 00:01:03,800
+Kasureta zatsunen ga roji e kieru ne
+
+23
+00:01:03,900 --> 00:01:06,400
+Oitsukitai no sa
+
+24
+00:01:06,400 --> 00:01:10,400
+Kodou to kaketeru mono no sa
+
+25
+00:01:10,400 --> 00:01:14,400
+Hanarete nando mo koi negatta
+
+26
+00:01:14,400 --> 00:01:18,700
+Ugoke to mukuro wo aogu
+
+27
+00:01:34,800 --> 00:01:35,700
+Pain
+
+28
+00:01:35,900 --> 00:01:38,300
+Nakushite kono sai
+
+29
+00:01:38,300 --> 00:01:39,500
+No pay
+
+30
+00:01:39,600 --> 00:01:42,500
+Yaku ni tatta yo shai wo
+
+31
+00:01:42,500 --> 00:01:44,300
+Anten mikai no meiro
+
+32
+00:01:44,300 --> 00:01:46,400
+Hakkatten kimi wa mae wo
+
+33
+00:01:46,400 --> 00:01:47,400
+Kurakunai
+
+34
+00:01:47,400 --> 00:01:48,400
+Ku nado nai
+
+35
+00:01:48,400 --> 00:01:48,900
+Hibi
+
+36
+00:01:48,900 --> 00:01:49,800
+Path find
+
+37
+00:01:49,800 --> 00:01:54,000
+Kore ga aidentitii Baimei City
+
+38
+00:01:54,000 --> 00:01:58,000
+nanana Nantodemo nanana
+
+39
+00:01:58,000 --> 00:02:00,000
+Taigen shi ni
+
+40
+00:02:00,000 --> 00:02:01,900
+Wait a minute
+
+41
+00:02:01,900 --> 00:02:04,800
+Sui mo amai mo utau
+
+42
+00:02:04,800 --> 00:02:07,800
+Saigen nai ne High and low
+
+43
+00:02:09,800 --> 00:02:15,600
+(Woo-ah)
+
+44
+00:02:16,500 --> 00:02:17,500
+(Break it down)
+
+45
+00:02:17,500 --> 00:02:21,300
+Azukaru senaka no sono hane ga
+
+46
+00:02:21,300 --> 00:02:25,100
+Aorarenai you ni tooboe wo
+
+47
+00:02:25,100 --> 00:02:29,000
+Shirakezu yume wo anjiaeba
+
+48
+00:02:29,000 --> 00:02:33,000
+Shinoida yoru ga kitto bokura
+
+49
+00:02:33,000 --> 00:02:36,000
+Tobenai tori no sairen
+
+50
+00:02:36,000 --> 00:02:39,500
+Shigarami kamikudaite
+
+51
+00:02:39,500 --> 00:02:43,900
+Odore kono yoru made arageru koe de
+
+52
+00:02:43,900 --> 00:02:48,400
+Kasureta zatsuon ga roji de hibiku ne
+
+53
+00:02:48,400 --> 00:02:51,100
+Tobenai tori no sairen
+
+54
+00:02:51,100 --> 00:02:52,300
+(Woo)
+
+55
+00:02:52,300 --> 00:02:55,000
+Shizuka ni kago kudaite
+
+56
+00:02:55,000 --> 00:02:59,600
+Odore kono yoru made arageru koe de
+
+57
+00:02:59,600 --> 00:03:03,300
+Unadaretakunai no desu
+
+58
+00:03:03,800 --> 00:03:06,400
+Kaerareyou no nai
+
+59
+00:03:06,500 --> 00:03:10,400
+Kouro ni koerareyou no nai
+
+60
+00:03:10,400 --> 00:03:14,400
+Sekai ga aru sore de mo kou ja nai tte
+
+61
+00:03:14,400 --> 00:03:18,200
+Aizu ni kyo wo aogu
+
+62
+00:03:18,200 --> 00:03:22,000
+Hazama de utsuroi aruku
+
+63
+00:03:22,000 --> 00:03:26,000
+Bokura wa sora wo aogu

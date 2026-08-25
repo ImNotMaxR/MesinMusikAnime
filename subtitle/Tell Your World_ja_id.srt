@@ -1,90 +1,90 @@
-﻿1
+1
 00:00:25,610 --> 00:00:28,203
-형태 없는 마음을
+Perasaan yang tak berwujud ini
 
 2
 00:00:28,203 --> 00:00:31,844
-잊지 않도록
+Agar aku tidak melupakannya
 
 3
 00:00:31,844 --> 00:00:34,184
-틀에 박힌
+Sebuah tata letak yang
 
 4
 00:00:34,184 --> 00:00:36,805
-레이아웃을
+Sudah ditentukan itu
 
 5
 00:00:36,805 --> 00:00:38,247
-지웠어
+Telah kuhapus
 
 6
 00:00:38,247 --> 00:00:40,688
-문득 흥얼거린
+Frasa yang tanpa sadar
 
 7
 00:00:40,688 --> 00:00:41,957
-프레이즈를
+Kusenandungkan itu
 
 8
 00:00:41,957 --> 00:00:44,665
-붙잡아서
+Akan kutangkap
 
 9
 00:00:44,665 --> 00:00:47,044
-가슴에 간직한
+Kata-kata yang
 
 10
 00:00:47,044 --> 00:00:48,659
-말을 실어
+Terpendam di dalam hatiku
 
 11
 00:00:48,659 --> 00:00:52,663
-하늘에 풀어놓는 거야
+Akan kulepaskan ke langit
 
 12
 00:00:52,663 --> 00:00:55,977
-네게 전하고 싶은 것이
+Hal yang ingin kusampaikan padamu
 
 13
 00:00:55,977 --> 00:00:59,083
-네게 보내고 싶은 것이
+Hal yang ingin kuberikan padamu
 
 14
 00:00:59,083 --> 00:01:00,220
-수많은
+Titik-titik
 
 15
 00:01:00,220 --> 00:01:02,200
-점은 선이 되어
+Yang banyak itu menjadi sebuah garis
 
 16
 00:01:02,200 --> 00:01:05,472
-먼 저편으로 울려퍼져
+Dan bergema jauh hingga ke ujung sana
 
 17
 00:01:05,472 --> 00:01:08,689
-네게 전하고 싶은 말이
+Kata-kata yang ingin kusampaikan padamu
 
 18
 00:01:08,689 --> 00:01:11,799
-네게 보내고 싶은 소리가
+Suara yang ingin kuberikan padamu
 
 19
 00:01:11,799 --> 00:01:12,994
-몇 개의
+Garis-garis
 
 20
 00:01:12,994 --> 00:01:15,091
-선은 원이 되어
+Yang banyak itu menjadi sebuah lingkaran
 
 21
 00:01:15,091 --> 00:01:17,479
-모든 것을 이어가
+Dan menghubungkan semuanya
 
 22
 00:01:17,479 --> 00:01:21,748
-어디에라도
+Kemanapun itu
 
 23
 00:01:21,748 --> 00:01:24,709
@@ -92,87 +92,87 @@ Ah...
 
 24
 00:01:37,490 --> 00:01:39,911
-새하얗게 맑았던
+Cahaya putih murni
 
 25
 00:01:39,911 --> 00:01:41,167
-빛은
+Yang jernih itu
 
 26
 00:01:41,167 --> 00:01:43,880
-너를 닮았어
+Bagaikan dirimu
 
 27
 00:01:43,880 --> 00:01:46,184
-가린 손의
+Suara yang merambat melalui celah
 
 28
 00:01:46,184 --> 00:01:50,289
-틈을 지나는 소리가
+Tangan yang kuangkat
 
 29
 00:01:50,289 --> 00:01:51,912
-문득 움직인
+Tiba-tiba bergerak
 
 30
 00:01:51,912 --> 00:01:56,712
-손가락이 새긴 리듬에
+Seiring dengan ritme yang diketuk oleh ujung jariku
 
 31
 00:01:56,712 --> 00:01:59,142
-내게 있는
+Dengan seluruh
 
 32
 00:01:59,142 --> 00:02:00,746
-모든 말을 실어
+Kata-kataku
 
 33
 00:02:00,746 --> 00:02:04,686
-하늘에 풀어놓는 거야
+Akan kulepaskan ke langit
 
 34
 00:02:04,686 --> 00:02:07,917
-네게 전하고 싶은 것이
+Hal yang ingin kusampaikan padamu
 
 35
 00:02:07,917 --> 00:02:11,096
-네게 보내고 싶은 것이
+Hal yang ingin kuberikan padamu
 
 36
 00:02:11,096 --> 00:02:12,175
-수많은
+Titik-titik
 
 37
 00:02:12,175 --> 00:02:14,266
-점은 선이 되어
+Yang banyak itu menjadi sebuah garis
 
 38
 00:02:14,266 --> 00:02:17,514
-먼 저편까지 파고들어
+Dan menembus jauh hingga ke ujung sana
 
 39
 00:02:17,514 --> 00:02:20,691
-네게 전하고 싶은 말이
+Kata-kata yang ingin kusampaikan padamu
 
 40
 00:02:20,691 --> 00:02:23,848
-네게 보내고 싶은 소리가
+Suara yang ingin kuberikan padamu
 
 41
 00:02:23,848 --> 00:02:25,018
-몇 개의
+Garis-garis
 
 42
 00:02:25,018 --> 00:02:27,109
-선은 원이 되어
+Yang banyak itu menjadi sebuah lingkaran
 
 43
 00:02:27,109 --> 00:02:29,444
-모든 것을 이어가
+Dan menghubungkan semuanya
 
 44
 00:02:29,444 --> 00:02:33,696
-어디에라도
+Kemanapun itu
 
 45
 00:02:33,696 --> 00:02:36,919
@@ -188,95 +188,95 @@ Ah...
 
 48
 00:02:43,145 --> 00:02:44,655
-연주하던
+Aku terus memainkannya
 
 49
 00:02:44,655 --> 00:02:46,254
-변하지 않는
+Hari-hari yang
 
 50
 00:02:46,254 --> 00:02:49,761
-날들을 의심치 않고
+Tak pernah berubah, tanpa sedikitpun ragu
 
 51
 00:02:49,761 --> 00:02:52,336
-아침은 누군가가
+Bahwa pagi hari adalah sesuatu
 
 52
 00:02:52,336 --> 00:02:54,154
-주는 것이라
+Yang akan diberikan oleh seseorang
 
 53
 00:02:54,154 --> 00:02:55,847
-생각했었어
+Dulu aku berpikir begitu
 
 54
 00:02:55,847 --> 00:02:57,502
-한순간이라도
+Suara yang kuyakini
 
 55
 00:02:57,502 --> 00:02:59,077
-믿었던
+Meski hanya sesaat itu
 
 56
 00:02:59,077 --> 00:03:02,529
-소리 풍경을 흔들어
+Akan mengguncang pemandangan ini
 
 57
 00:03:02,529 --> 00:03:05,449
-가르쳐줘
+Beritahu aku
 
 58
 00:03:05,449 --> 00:03:08,059
-너만의
+Dunia yang
 
 59
 00:03:08,059 --> 00:03:11,948
-세계
+Hanya milikmu
 
 60
 00:03:11,948 --> 00:03:15,079
-네가 전하고 싶은 것은
+Hal yang ingin kau sampaikan
 
 61
 00:03:15,079 --> 00:03:18,272
-네가 보내고 싶은 것은
+Hal yang ingin kau berikan
 
 62
 00:03:18,272 --> 00:03:19,311
-수많은
+Titik-titik
 
 63
 00:03:19,311 --> 00:03:21,504
-점은 선이 되어
+Yang banyak itu menjadi sebuah garis
 
 64
 00:03:21,504 --> 00:03:24,645
-저너머 멀리 울려퍼져
+Dan bergema jauh hingga ke ujung sana
 
 65
 00:03:24,645 --> 00:03:27,831
-네가 전하고 싶은 말이
+Kata-kata yang ingin kau sampaikan
 
 66
 00:03:27,831 --> 00:03:31,050
-네가 보내고 싶은 소리는
+Suara yang ingin kau berikan
 
 67
 00:03:31,050 --> 00:03:32,081
-몇 개의
+Garis-garis
 
 68
 00:03:32,081 --> 00:03:34,271
-선은 원이 되어
+Yang banyak itu menjadi sebuah lingkaran
 
 69
 00:03:34,271 --> 00:03:36,714
-모든 것을 이어가
+Dan menghubungkan semuanya
 
 70
 00:03:36,714 --> 00:03:40,963
-어디에라도
+Kemanapun itu
 
 71
 00:03:40,963 --> 00:03:41,864
@@ -309,4 +309,3 @@ Ah...
 78
 00:03:51,419 --> 00:03:55,088
 Ah...
-

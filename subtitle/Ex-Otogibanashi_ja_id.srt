@@ -1,118 +1,118 @@
-﻿1
+1
 00:00:07,872 --> 00:00:09,402
-옛날 옛적에
+Pada zaman dahulu kala
 
 2
 00:00:09,402 --> 00:00:12,896
-누구나 아는 이야기
+Sebuah kisah yang diketahui semua orang
 
 3
 00:00:12,896 --> 00:00:15,682
-그 유명한 카구야 공주는
+Putri Kaguya yang terkenal itu
 
 4
 00:00:15,682 --> 00:00:17,822
-이렇게 말했지
+Berkata seperti ini
 
 5
 00:00:17,822 --> 00:00:20,340
-그런 결말 조금도
+Akhir cerita yang seperti itu sedikit pun
 
 6
 00:00:20,340 --> 00:00:22,958
-바라지 않거든
+Tidak kuinginkan
 
 7
 00:00:22,958 --> 00:00:25,076
-'운명'이니까 너는
+Hanya karena takdir, apakah kau
 
 8
 00:00:25,076 --> 00:00:28,058
-그대로 받아들이는 거야?
+Akan mengangguk begitu saja?
 
 9
 00:00:28,058 --> 00:00:30,532
-누군가가 지어낸
+Ini bukanlah cerita
 
 10
 00:00:30,532 --> 00:00:33,081
-이야기가 아니라
+Yang ditulis oleh seseorang
 
 11
 00:00:33,081 --> 00:00:35,567
-여기에 있는
+Ada di sini
 
 12
 00:00:35,567 --> 00:00:38,137
-너와 나
+Kau dan aku
 
 13
 00:00:38,137 --> 00:00:40,593
-그리운 듯한
+Terasa bernostalgia
 
 14
 00:00:40,593 --> 00:00:43,059
-처음인 듯한
+Terasa seperti baru pertama kali
 
 15
 00:00:43,059 --> 00:00:45,729
-그런 노래야
+Lagu yang seperti itulah
 
 16
 00:00:45,729 --> 00:00:47,752
-이 노래는
+Ini
 
 17
 00:00:48,227 --> 00:00:50,030
-너와 지금 보는
+Pemandangan yang kulihat bersamamu
 
 18
 00:00:50,032 --> 00:00:51,111
-이 풍경
+Saat ini
 
 19
 00:00:51,111 --> 00:00:53,850
-몇 억 번이나 떠올렸을까
+Entah sudah berapa ratus juta kali kuingat
 
 20
 00:00:53,850 --> 00:00:56,119
-일곱 빛깔로 반짝이는
+Berkilauan tujuh warna
 
 21
 00:00:56,119 --> 00:00:59,022
-Ex-<ruby>Otogibanashi<rt>옛날이야기</rt></ruby>
+Ex-Otogibanashi
 
 22
 00:00:59,022 --> 00:01:01,208
-그래, 내가 히로인이야
+Benar, akulah sang heroine
 
 23
 00:01:01,208 --> 00:01:02,380
-너의 그 마음을
+Heart itu
 
 24
 00:01:02,380 --> 00:01:04,058
-꿰뚫어 줄게
+Akan kutembus untukmu
 
 25
 00:01:04,058 --> 00:01:05,216
-모른다는 소리는
+Aku tak akan membiarkanmu berkata
 
 26
 00:01:05,216 --> 00:01:06,296
-못할 거야
+Bahwa kau tak mengenalku
 
 27
 00:01:06,296 --> 00:01:07,516
-이름을 불러줘
+Panggil namaku
 
 28
 00:01:07,516 --> 00:01:08,773
-나는 누구?
+Siapakah aku?
 
 29
 00:01:08,773 --> 00:01:11,765
-모두에게 인정받는 공주님
+Seorang putri yang sangat populer
 
 30
 00:01:15,434 --> 00:01:16,016
@@ -120,225 +120,224 @@ Ex-<ruby>Otogibanashi<rt>옛날이야기</rt></ruby>
 
 31
 00:01:16,016 --> 00:01:19,041
-<ruby>8천 년<rt>야치요</rt></ruby>분의 부탁이 있는데
+Aku punya permintaan untuk delapan ribu tahun
 
 32
 00:01:19,041 --> 00:01:21,085
-괜찮을까?
+Bolehkah?
 
 33
 00:01:21,085 --> 00:01:22,874
-있는 힘껏 꼬옥
+Peluk aku dengan erat
 
 34
 00:01:22,874 --> 00:01:25,344
-그래 좀 더 꼬옥 안아줘
+Ya, peluk aku lebih erat lagi
 
 35
 00:01:26,109 --> 00:01:27,513
-있잖아, 뭐랄까
+Anu, umm
 
 36
 00:01:27,513 --> 00:01:31,192
-너무 행복한 탓에
+Karena aku terlalu bahagia
 
 37
 00:01:31,192 --> 00:01:33,573
-엄청 웃고 있는데도
+Padahal aku tertawa terbahak-bahak
 
 38
 00:01:33,573 --> 00:01:36,344
-눈물이 멈추지 않아
+Tapi air mataku tak mau berhenti
 
 39
 00:01:57,430 --> 00:01:59,962
-네가 말할 법한 걸 적었어
+Kutuliskan hal-hal yang mungkin akan kau katakan
 
 40
 00:01:59,962 --> 00:02:00,426
-적고
+Menulis
 
 41
 00:02:00,426 --> 00:02:00,932
-또 적고
+Menulis
 
 42
 00:02:00,932 --> 00:02:02,486
-마구 적어대서 말야
+Terus menulis, lalu
 
 43
 00:02:02,486 --> 00:02:04,947
-나는 적당히 흘려 듣는거야
+Aku mendengarkannya dengan asal-asalan
 
 44
 00:02:04,947 --> 00:02:07,561
-그러면 그게 대답하는 거야
+Dan kemudian hal itu akan menjawabnya
 
 45
 00:02:07,561 --> 00:02:08,152
-다음 날도
+Di hari berikutnya pun
 
 46
 00:02:08,152 --> 00:02:08,860
-다음 날도
+Di hari berikutnya pun
 
 47
 00:02:08,862 --> 00:02:10,022
-그 다음 날도
+Di hari berikutnya pun
 
 48
 00:02:10,022 --> 00:02:10,594
-지루하고
+Aku bosan
 
 49
 00:02:10,594 --> 00:02:11,472
-외롭고
+Kesepian
 
 50
 00:02:11,472 --> 00:02:12,595
-슬퍼서
+Bersedih
 
 51
 00:02:12,595 --> 00:02:13,248
-펑펑 울어대고
+Terus menangis
 
 52
 00:02:13,248 --> 00:02:13,986
-마구 소리 지르고
+Terus berteriak
 
 53
 00:02:13,986 --> 00:02:15,108
-화풀이하고
+Melampiaskan kemarahan
 
 54
 00:02:15,108 --> 00:02:15,851
-그것도 질려
+Dan akhirnya bosan dengan hal itu
 
 55
 00:02:15,851 --> 00:02:16,718
-죽고 싶어졌어
+Ingin mati rasanya
 
 56
 00:02:16,720 --> 00:02:19,252
-언젠가 고독은
+Akankah kesepian ini
 
 57
 00:02:19,252 --> 00:02:21,717
-치유될까
+Sembuh suatu hari nanti?
 
 58
 00:02:21,717 --> 00:02:24,261
-변하지 않아
+Tak akan berubah
 
 59
 00:02:24,261 --> 00:02:26,743
-무엇 하나도
+Segalanya
 
 60
 00:02:26,743 --> 00:02:29,297
-그것도 잠깐의
+Mari kita anggap itu
 
 61
 00:02:29,297 --> 00:02:31,745
-순간이라고 생각하자
+Hanya untuk sementara waktu
 
 62
 00:02:31,745 --> 00:02:33,097
-그런
+Delapan ribu generasi
 
 63
 00:02:33,097 --> 00:02:34,356
-<ruby>8천 년<rt>야치요</rt></ruby>을
+Yang seperti itu
 
 64
 00:02:34,356 --> 00:02:36,356
-넘어서
+Melampauinya
 
 65
 00:02:36,848 --> 00:02:38,622
-너와 지금 보는
+Pemandangan yang kulihat bersamamu
 
 66
 00:02:38,622 --> 00:02:39,779
-이 풍경
+Saat ini
 
 67
 00:02:39,779 --> 00:02:42,555
-몇 억 번이나 꿈꿨을까
+Entah sudah berapa ratus juta kali aku memimpikannya
 
 68
 00:02:42,555 --> 00:02:44,819
-너의 노래와 닿으면
+Jika lagumu telah sampai
 
 69
 00:02:44,819 --> 00:02:47,692
-Ex-<ruby>Otogibanashi<rt>옛날이야기</rt></ruby>
+Ex-Otogibanashi
 
 70
 00:02:47,692 --> 00:02:49,827
-이 눈을 똑바로 봐
+Tatap lurus ke mataku ini
 
 71
 00:02:49,827 --> 00:02:52,639
-한순간에 설레게 할테니까
+Karena aku akan membuatmu berdebar dalam sekejap
 
 72
 00:02:52,639 --> 00:02:54,929
-달밤에 빛나는
+Bersinar di malam bulan
 
 73
 00:02:54,929 --> 00:02:55,912
-그 모습
+Sosok itu
 
 74
 00:02:55,912 --> 00:02:57,466
-아아 어찌나 청아한지
+Ah betapa sucinya
 
 75
 00:02:57,466 --> 00:03:00,457
-참으로 고귀한 공주님
+Seorang putri yang sangat mulia
 
 76
 00:03:00,871 --> 00:03:03,392
-단 한 번뿐인 인생
+Di kehidupan yang hanya sekali ini
 
 77
 00:03:03,392 --> 00:03:06,231
-단 한 번뿐인 지금
+Di masa sekarang yang hanya sekali ini
 
 78
 00:03:06,231 --> 00:03:07,503
-잘 봐
+Hei
 
 79
 00:03:07,503 --> 00:03:10,301
-우리가 있는 거야
+Kita ada di sini lho
 
 80
 00:03:10,983 --> 00:03:13,495
-분명 영원이었어
+Pasti semuanya abadi
 
 81
 00:03:13,495 --> 00:03:16,331
-만나고 싶다고 바라기까지
+Hingga aku berharap ingin bertemu
 
 82
 00:03:16,331 --> 00:03:17,575
-맞아
+Benar
 
 83
 00:03:17,575 --> 00:03:20,596
-나는
+Aku
 
 84
 00:03:21,834 --> 00:03:24,585
-그런
+Yang seperti itu
 
 85
 00:03:24,585 --> 00:03:27,216
-옛날
+Dongeng
 
 86
 00:03:27,216 --> 00:03:31,911
-이야기
-
+Saja

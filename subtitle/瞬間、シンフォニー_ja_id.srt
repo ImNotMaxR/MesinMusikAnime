@@ -1,384 +1,383 @@
-﻿1
+1
 00:00:19,228 --> 00:00:20,363
-어떤
+Tak peduli seperti apa
 
 2
 00:00:20,363 --> 00:00:21,185
-내일이
+Hari esok yang
 
 3
 00:00:21,185 --> 00:00:23,019
-오더라도
+Akan datang
 
 4
 00:00:23,019 --> 00:00:25,182
-웃을 수 있도록
+Agar kita bisa tersenyum
 
 5
 00:00:25,182 --> 00:00:28,684
-지금을 살아가자
+Mari kita jalani masa kini
 
 6
 00:00:28,684 --> 00:00:30,300
-그렇게
+Dengan cara seperti itu
 
 7
 00:00:30,300 --> 00:00:32,686
-결심했는데도
+Padahal aku sudah memutuskannya
 
 8
 00:00:32,686 --> 00:00:33,882
-변하지 않는
+Namun tak kunjung berubah
 
 9
 00:00:33,882 --> 00:00:34,822
-오늘을
+Hari ini
 
 10
 00:00:34,822 --> 00:00:38,293
-꿈꾸고 말아
+Terus kuimpikan
 
 11
 00:00:38,293 --> 00:00:40,794
-좀 더 충동적인 소리로
+Dengan suara yang lebih impulsif
 
 12
 00:00:40,794 --> 00:00:43,219
-좀 더 감정적인 노래로
+Dengan lagu yang lebih emosional
 
 13
 00:00:43,219 --> 00:00:45,838
-작별인사를 물들이는
+Mewarnai ucapan perpisahan ini
 
 14
 00:00:45,838 --> 00:00:47,945
-심포니
+Dengan sebuah Simfoni
 
 15
 00:00:47,945 --> 00:00:50,398
-동경하던 풍경은
+Pemandangan yang ku dambakan
 
 16
 00:00:50,398 --> 00:00:52,763
-생각했던 것보다도
+Ternyata jauh lebih
 
 17
 00:00:52,763 --> 00:00:55,040
-훨씬 복잡하고
+Jauh lebih rumit
 
 18
 00:00:55,040 --> 00:00:56,147
-자유롭고
+Begitu bebas
 
 19
 00:00:56,147 --> 00:00:57,177
-아름답고
+Dan begitu indah
 
 20
 00:00:57,177 --> 00:01:00,070
-덧없어서
+Serta begitu fana
 
 21
 00:01:02,047 --> 00:01:04,467
-몇 천 년이 지나도
+Walau ribuan tahun telah berlalu
 
 22
 00:01:04,467 --> 00:01:07,169
-몇 만 년이 흘러도
+Walau puluhan ribu tahun telah berlalu
 
 23
 00:01:07,169 --> 00:01:08,054
-분명
+Pastinya
 
 24
 00:01:08,054 --> 00:01:09,798
-이 1초는
+Satu detik ini
 
 25
 00:01:09,798 --> 00:01:11,909
-영원토록 이어질 거야
+Akan terus berlanjut selamanya
 
 26
 00:01:11,909 --> 00:01:14,037
-시작이란 건
+Segala hal yang bermula
 
 27
 00:01:14,037 --> 00:01:16,708
-끝을 향해 가는 것
+Serta segala hal yang akan berakhir
 
 28
 00:01:16,708 --> 00:01:17,689
-살며시
+Secara perlahan
 
 29
 00:01:17,689 --> 00:01:19,114
-지금, 네가
+Saat ini, kau yang
 
 30
 00:01:19,114 --> 00:01:22,769
-웃어주었던 것
+Telah tersenyum untukku
 
 31
 00:01:22,769 --> 00:01:25,160
-그걸 운명이라
+Jika hal itu bisa
 
 32
 00:01:25,160 --> 00:01:26,649
-부른다면
+Disebut sebagai takdir
 
 33
 00:01:26,649 --> 00:01:27,287
-전부
+Maka semuanya
 
 34
 00:01:27,287 --> 00:01:31,516
-끌어안아 볼래
+Mari kita dekap semuanya
 
 35
 00:01:31,516 --> 00:01:33,249
-Ah, 세상이
+Ah, dunia ini
 
 36
 00:01:33,249 --> 00:01:35,068
-형형색색으로
+Semakin dipenuhi
 
 37
 00:01:35,068 --> 00:01:36,833
-가득 차 가네
+Dengan berbagai macam warna
 
 38
 00:01:36,833 --> 00:01:38,095
-눈물도
+Baik air mata
 
 39
 00:01:38,095 --> 00:01:39,316
-미소도
+Ataupun senyuman
 
 40
 00:01:39,316 --> 00:01:43,384
-모두 비춰 가
+Akan selalu diterangi sinarnya
 
 41
 00:02:02,365 --> 00:02:04,524
-반전
+Pembalikan keadaan
 
 42
 00:02:04,524 --> 00:02:06,236
-같은 건
+Sesuatu seperti itu
 
 43
 00:02:06,236 --> 00:02:08,401
-기대하지 않아
+Aku tak pernah mengharapkannya
 
 44
 00:02:08,401 --> 00:02:11,926
-기대하고 싶지도 않아
+Aku juga tak ingin mengharapkannya
 
 45
 00:02:11,926 --> 00:02:15,637
-너를 만났다는 것
+Dipertemukan denganmu
 
 46
 00:02:15,637 --> 00:02:17,120
-그것보단 더한
+Adalah sesuatu yang lebih dari segalanya
 
 47
 00:02:17,120 --> 00:02:18,868
-반전은
+Pembalikan keadaan
 
 48
 00:02:18,868 --> 00:02:21,579
-없으니까 말이야
+Karena tak ada hal lain seperti itu lagi
 
 49
 00:02:21,579 --> 00:02:22,232
-조금
+Walau sedikit saja
 
 50
 00:02:22,232 --> 00:02:24,009
-어른인 척해 보고 싶어
+Aku ingin mencoba bersikap dewasa
 
 51
 00:02:24,009 --> 00:02:24,629
-조금
+Walau hanya sedikit
 
 52
 00:02:24,629 --> 00:02:26,511
-알 것만 같아
+Aku merasa seperti memahaminya
 
 53
 00:02:26,511 --> 00:02:31,100
-삼켜버린 말의 씁쓸함
+Kepahitan dari kata-kata yang kutelan kembali
 
 54
 00:02:31,100 --> 00:02:33,528
-등 뒤를 숨기는
+Menutupi punggungku ini
 
 55
 00:02:33,528 --> 00:02:36,046
-저 달처럼
+Sama seperti rembulan itu
 
 56
 00:02:36,046 --> 00:02:36,899
-항상
+Karena selalu saja
 
 57
 00:02:36,899 --> 00:02:37,819
-사람은
+Tiap orang itu
 
 58
 00:02:37,819 --> 00:02:39,229
-전부 자신의
+Masing-masing menyimpan
 
 59
 00:02:39,229 --> 00:02:40,607
-마음을
+Perasaan mereka
 
 60
 00:02:40,607 --> 00:02:41,984
-숨긴 채
+Sembari terus menyembunyikannya
 
 61
 00:02:41,984 --> 00:02:46,101
-빛나 보이곤 했어
+Agar dapat terlihat bersinar
 
 62
 00:02:48,013 --> 00:02:50,442
-돌아가야 해
+Aku harus kembali
 
 63
 00:02:50,442 --> 00:02:52,817
-돌아가야만 해
+Aku harus segera pulang
 
 64
 00:02:52,817 --> 00:02:53,609
-그야
+Karena
 
 65
 00:02:53,609 --> 00:02:55,220
-그것마저도
+Hal itu juga bagian dari
 
 66
 00:02:55,220 --> 00:02:57,835
-사랑해야 할 운명이니까
+Takdir yang patut dicintai
 
 67
 00:02:57,835 --> 00:02:59,908
-마지막까지
+Hingga di akhir nanti
 
 68
 00:02:59,908 --> 00:03:02,291
-있지, 마지막까지
+Hei, sampai ke akhirnya
 
 69
 00:03:02,291 --> 00:03:03,340
-아직
+Aku masih
 
 70
 00:03:03,340 --> 00:03:07,153
-새로운 멜로디를
+Suatu melodi yang baru
 
 71
 00:03:07,153 --> 00:03:10,503
-계속 노래하고 싶어
+Akan terus kunyanyikan
 
 72
 00:03:10,503 --> 00:03:11,569
-끝나지 않는
+Sebuah irama
 
 73
 00:03:11,569 --> 00:03:13,279
-선율을
+Yang tiada akhirnya
 
 74
 00:03:13,279 --> 00:03:16,432
-연주해 줘
+Akan kumainkan untukmu
 
 75
 00:03:20,616 --> 00:03:21,905
-수 천
+Walau ribuan
 
 76
 00:03:21,905 --> 00:03:23,616
-해가 지나도
+Tahun telah berlalu
 
 77
 00:03:23,616 --> 00:03:24,266
-수 만
+Walau puluhan ribu
 
 78
 00:03:24,266 --> 00:03:26,349
-해가 흘러도
+Tahun telah berlalu
 
 79
 00:03:26,349 --> 00:03:27,303
-분명
+Pastinya
 
 80
 00:03:27,303 --> 00:03:29,046
-이 1초는
+Satu detik ini
 
 81
 00:03:29,046 --> 00:03:31,164
-영원토록 이어질 거야
+Akan terus berlanjut selamanya
 
 82
 00:03:31,164 --> 00:03:33,275
-시작이란 건
+Segala hal yang bermula
 
 83
 00:03:33,275 --> 00:03:35,945
-끝을 향해 가는 것
+Serta segala hal yang akan berakhir
 
 84
 00:03:35,945 --> 00:03:36,891
-살며시
+Secara perlahan
 
 85
 00:03:36,891 --> 00:03:38,346
-지금, 네가
+Saat ini, kau yang
 
 86
 00:03:38,346 --> 00:03:41,977
-울어준 것
+Telah menangis untukku
 
 87
 00:03:41,977 --> 00:03:44,356
-그걸 운명이라
+Jika hal itu bisa
 
 88
 00:03:44,356 --> 00:03:45,848
-부른다면
+Disebut sebagai takdir
 
 89
 00:03:45,848 --> 00:03:46,501
-전부
+Maka semuanya
 
 90
 00:03:46,501 --> 00:03:50,684
-끌어안아 볼래
+Mari kita dekap semuanya
 
 91
 00:03:50,684 --> 00:03:52,458
-Ah, 세상이
+Ah, dunia ini
 
 92
 00:03:52,458 --> 00:03:54,293
-형형색색으로
+Semakin dipenuhi
 
 93
 00:03:54,293 --> 00:03:56,023
-가득 차 가네
+Dengan berbagai macam warna
 
 94
 00:03:56,023 --> 00:03:57,183
-모든 것이
+Seakan segala hal
 
 95
 00:03:57,183 --> 00:03:58,929
-축복을
+Sedang merayakan suatu berkat
 
 96
 00:03:58,929 --> 00:04:01,813
-연주하고 있어
-
+Begitulah ia mengalun

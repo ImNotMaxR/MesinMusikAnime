@@ -1,372 +1,371 @@
-﻿1
+1
 00:00:21,414 --> 00:00:22,366
-아침에 눈을 뜨면
+Bangun di pagi hari
 
 2
 00:00:22,366 --> 00:00:23,920
-오늘은 뭐 할까
+Apa yang harus kulakukan hari ini ya
 
 3
 00:00:23,920 --> 00:00:26,352
-호기심이 멈추질 않아
+Rasa penasaran ini tak terbendung
 
 4
 00:00:26,352 --> 00:00:29,343
-춤추는 이 마음은
+Hati yang mulai menari ini
 
 5
 00:00:29,343 --> 00:00:31,328
-통제 불가능
+Tak bisa dikendalikan
 
 6
 00:00:31,328 --> 00:00:32,383
-틀에 박힌 건
+Template itu
 
 7
 00:00:32,383 --> 00:00:33,677
-구겨서 버리고
+Remas dan buang saja
 
 8
 00:00:33,677 --> 00:00:34,958
-스킵하면서
+Mari kita injak-injak
 
 9
 00:00:34,958 --> 00:00:36,289
-밟아버리자
+Dengan Skip
 
 10
 00:00:36,289 --> 00:00:37,537
-지구 전부
+Seluruh bumi
 
 11
 00:00:37,537 --> 00:00:39,940
-새로 칠해버릴래
+Ayo kita warnai ulang
 
 12
 00:00:41,271 --> 00:00:43,383
-딱딱한 건
+Yang kaku-kaku itu
 
 13
 00:00:43,383 --> 00:00:46,231
-지루한데다 진심 무리!
+Sangat melelahkan dan sungguh tidak bisa!
 
 14
 00:00:46,231 --> 00:00:48,495
-그런 건 바로
+Hal seperti itu, secepatnya
 
 15
 00:00:48,495 --> 00:00:49,387
-패스야!
+Aku akan keluar duluan!
 
 16
 00:00:49,387 --> 00:00:52,457
-메롱이라구
+Aku memang suka meledek
 
 17
 00:00:52,457 --> 00:00:53,584
-덤벼봐!
+Tapi aku siap meladenimu!
 
 18
 00:00:54,288 --> 00:00:55,830
-심박수 올리며
+Naikkan detak jantung kita
 
 19
 00:00:55,830 --> 00:00:57,472
-살아가자
+Dan mari kita hidup
 
 20
 00:00:57,472 --> 00:00:59,962
-지루함은 빼놓고 가자
+Ayo kita rebut kembali rasa bosan itu
 
 21
 00:00:59,962 --> 00:01:02,975
-짜증나는 것도 푹 빠지면
+Hal yang menyebalkan pun akan membuatmu terjerumus
 
 22
 00:01:02,975 --> 00:01:04,673
-어느새 좋아하게 돼
+Dan kau akan menyukainya
 
 23
 00:01:04,673 --> 00:01:05,722
-완벽한 캐릭은
+Karakter yang sempurna
 
 24
 00:01:05,722 --> 00:01:07,495
-망겜이니 모른 척~
+Berpura-pura tidak tahu dengan game yang mustahil
 
 25
 00:01:07,495 --> 00:01:08,993
-너무 귀여워서
+Karena terlalu imut
 
 26
 00:01:08,993 --> 00:01:09,972
-그랑프리
+Grand Prix
 
 27
 00:01:09,972 --> 00:01:11,688
-Ah, 뭐든지
+Ah, apapun itu
 
 28
 00:01:11,688 --> 00:01:13,036
-알고 싶어
+Aku ingin tahu
 
 29
 00:01:13,036 --> 00:01:14,582
-맛보고 싶어
+Aku ingin mencicipinya
 
 30
 00:01:14,582 --> 00:01:17,097
-아무도 못 말려
+Tak ada seorangpun yang bisa menghentikannya
 
 31
 00:01:17,097 --> 00:01:20,146
-노래하지 않고는 못 견뎌
+Aku tak bisa menahan diri untuk tidak bernyanyi
 
 32
 00:01:29,815 --> 00:01:32,291
-‘혹시’로 포기하느니
+Daripada menyerah dengan kata "kalau saja"
 
 33
 00:01:32,291 --> 00:01:34,808
-‘혹시’에 베팅하고 싶어
+Aku ingin bertaruh dengan kata "kalau saja"
 
 34
 00:01:34,808 --> 00:01:36,509
-이런 세상은
+Dunia ini
 
 35
 00:01:36,509 --> 00:01:37,840
-모르는
+Jika kau tak mengetahuinya
 
 36
 00:01:37,840 --> 00:01:39,613
-편이 손해잖아?
+Bukankah kau akan rugi?
 
 37
 00:01:39,613 --> 00:01:42,270
-피곤하면 살짝 쉬고
+Jika kau lelah, memboloslah sebentar
 
 38
 00:01:42,270 --> 00:01:44,667
-당분으로 회복하고
+Pulihkan dirimu dengan gula
 
 39
 00:01:44,667 --> 00:01:48,115
-내 기분을 맞춰주자
+Mari buat diri kita sendiri merasa lebih baik
 
 40
 00:01:49,641 --> 00:01:51,849
-우등생
+Murid teladan
 
 41
 00:01:51,849 --> 00:01:54,571
-연기해도 역시 무리!
+Berpura-pura pun aku tak bisa!
 
 42
 00:01:54,571 --> 00:01:56,663
-내츄럴하게
+Meskipun secara Natural
 
 43
 00:01:56,663 --> 00:02:00,860
-사랑스러운 소녀인뎁쇼
+Aku ini gadis yang manis
 
 44
 00:02:00,860 --> 00:02:01,989
-최강!
+Tapi aku yang terkuat!
 
 45
 00:02:02,719 --> 00:02:04,260
-사랑에 둘러싸여
+Dikelilingi oleh hal-hal yang kucintai
 
 46
 00:02:04,260 --> 00:02:05,898
-살아가자
+Mari kita hidup
 
 47
 00:02:05,898 --> 00:02:08,371
-내일도 웃고 싶어
+Besok pun aku ingin tetap tertawa
 
 48
 00:02:08,371 --> 00:02:10,150
-알아버리면
+Jika kau sudah mengetahuinya
 
 49
 00:02:10,150 --> 00:02:11,430
-그대로
+Kau akan
 
 50
 00:02:11,430 --> 00:02:13,065
-좋아하게 돼버려
+Langsung menyukainya
 
 51
 00:02:13,065 --> 00:02:13,811
-망상 용량 무한
+Kapasitas khayalanku
 
 52
 00:02:13,811 --> 00:02:15,858
-텐션도 올려서
+Terus meningkat tanpa batas
 
 53
 00:02:15,858 --> 00:02:17,366
-정상까지도
+Bahkan ke puncak pun
 
 54
 00:02:17,366 --> 00:02:18,350
-데려가 줄게
+Aku akan membawamu
 
 55
 00:02:18,350 --> 00:02:20,227
-Ah, 언제든
+Ah, kapanpun
 
 56
 00:02:20,227 --> 00:02:21,367
-무리수라도
+Permintaan yang tidak masuk akal
 
 57
 00:02:21,367 --> 00:02:22,971
-공격적으로
+Dengan sikap menyerang
 
 58
 00:02:22,971 --> 00:02:25,488
-아무도 못 말려
+Tak ada seorangpun yang bisa menghentikannya
 
 59
 00:02:25,488 --> 00:02:28,463
-춤추지 않고는 못 견뎌
+Aku tak bisa menahan diri untuk tidak menari
 
 60
 00:02:28,463 --> 00:02:30,890
-고개 숙이고 있는 너
+Hei kau yang menunduk di sana
 
 61
 00:02:30,890 --> 00:02:32,597
-불만만 쏟아내 봐도
+Meskipun kau hanya mengeluh
 
 62
 00:02:32,597 --> 00:02:34,312
-의미 없잖아!
+Bukankah itu tidak ada artinya!
 
 63
 00:02:34,312 --> 00:02:35,495
-바보야!
+Bodoh!
 
 64
 00:02:35,956 --> 00:02:38,355
-리셋은 없어, 단 한 번뿐
+Tidak ada Reset, ini hanya sekali
 
 65
 00:02:38,355 --> 00:02:40,572
-언제나 진검승부 아슬아슬
+Kapanpun ini adalah pertarungan yang serius hingga batasnya
 
 66
 00:02:40,572 --> 00:02:41,161
-좀 더
+Lebih banyak
 
 67
 00:02:41,161 --> 00:02:41,674
-좀 더
+Lebih banyak
 
 68
 00:02:41,674 --> 00:02:42,134
-좀 더
+Lebih banyak
 
 69
 00:02:42,134 --> 00:02:42,612
-좀 더
+Lebih banyak
 
 70
 00:02:42,612 --> 00:02:43,273
-좀 더
+Lebih banyak
 
 71
 00:02:43,273 --> 00:02:44,694
-제멋대로 살아도 돼!
+Jadilah egois!
 
 72
 00:02:44,694 --> 00:02:45,840
-이건 네 인생이니까
+Ini adalah hidupmu
 
 73
 00:03:05,538 --> 00:03:07,718
-참을 필요는
+Bersabar dan semacamnya
 
 74
 00:03:07,718 --> 00:03:10,463
-없다구
+Kau tidak perlu melakukannya
 
 75
 00:03:10,463 --> 00:03:12,672
-곁에 있을테니
+Aku ada di sisimu
 
 76
 00:03:12,672 --> 00:03:13,483
-지금도
+Sekarang
 
 77
 00:03:13,483 --> 00:03:14,863
-앞으로도
+Dan mulai dari sekarang
 
 78
 00:03:14,863 --> 00:03:16,764
-계속
+Selamanya
 
 79
 00:03:16,764 --> 00:03:17,862
-약속!
+Aku berjanji!
 
 80
 00:03:18,540 --> 00:03:20,035
-심박수 올리며
+Naikkan detak jantung kita
 
 81
 00:03:20,035 --> 00:03:21,731
-살아가자
+Dan mari kita hidup
 
 82
 00:03:21,731 --> 00:03:24,271
-지루함은 빼놓고 가자
+Ayo kita rebut kembali rasa bosan itu
 
 83
 00:03:24,271 --> 00:03:27,361
-짜증나는 것도 푹 빠지면
+Hal yang menyebalkan pun akan membuatmu terjerumus
 
 84
 00:03:27,361 --> 00:03:28,918
-어느새 좋아하게 돼
+Dan kau akan menyukainya
 
 85
 00:03:28,918 --> 00:03:29,989
-완벽한 캐릭은
+Karakter yang sempurna
 
 86
 00:03:29,989 --> 00:03:31,709
-망겜이니 모른 척~
+Berpura-pura tidak tahu dengan game yang mustahil
 
 87
 00:03:31,709 --> 00:03:33,230
-너무 귀여워서
+Karena terlalu imut
 
 88
 00:03:33,230 --> 00:03:34,217
-그랑프리
+Grand Prix
 
 89
 00:03:34,217 --> 00:03:35,912
-Ah, 뭐든지
+Ah, apapun itu
 
 90
 00:03:35,912 --> 00:03:37,265
-알고 싶어
+Aku ingin tahu
 
 91
 00:03:37,265 --> 00:03:38,933
-맛보고 싶어
+Aku ingin mencicipinya
 
 92
 00:03:38,933 --> 00:03:41,410
-아무도 못 말려
+Tak ada seorangpun yang bisa menghentikannya
 
 93
 00:03:41,410 --> 00:03:44,346
-노래하지 않고는 못 견뎌
-
+Aku tak bisa menahan diri untuk tidak bernyanyi

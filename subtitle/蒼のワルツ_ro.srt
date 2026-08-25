@@ -1,0 +1,243 @@
+1
+00:00:00,800 --> 00:00:04,000
+natsukashisa ni oboreta
+
+2
+00:00:04,000 --> 00:00:07,000
+mada aokatta bokura
+
+3
+00:00:07,000 --> 00:00:09,800
+kumo ga nokoru aima
+
+4
+00:00:09,800 --> 00:00:12,800
+tada taiyou o miteita
+
+5
+00:00:13,000 --> 00:00:15,700
+ozanari na bokura
+
+6
+00:00:15,700 --> 00:00:18,500
+afuredashita koe ga
+
+7
+00:00:18,500 --> 00:00:21,300
+tada taisetsu na koto wa
+
+8
+00:00:21,300 --> 00:00:25,500
+tsutawaranai you ni dekiteta
+
+9
+00:00:36,900 --> 00:00:39,600
+katachi no nai iromi o
+
+10
+00:00:39,600 --> 00:00:42,600
+dakishimete mita no
+
+11
+00:00:42,600 --> 00:00:45,400
+kitai to fuan no hibi o
+
+12
+00:00:45,400 --> 00:00:48,400
+koukai no aji de shitta
+
+13
+00:00:48,400 --> 00:00:51,400
+shiranai sekai e
+
+14
+00:00:51,400 --> 00:00:54,300
+te o nobashitakute
+
+15
+00:00:54,300 --> 00:00:57,200
+tsuyogari no uso nado
+
+16
+00:00:57,200 --> 00:01:00,000
+poketto ni shimatta
+
+17
+00:01:00,000 --> 00:01:05,700
+yasashisa o tsutsumu itami mo zenbu
+
+18
+00:01:05,800 --> 00:01:10,700
+oboeteitakute
+
+19
+00:01:11,250 --> 00:01:14,500
+tada negatte negatte
+
+20
+00:01:14,500 --> 00:01:16,700
+umarekawatte mo
+
+21
+00:01:16,700 --> 00:01:23,100
+futashika na mirai o utatte wa furetakute
+
+22
+00:01:23,100 --> 00:01:28,300
+tsutatte tsutatte hoho o nagareru
+
+23
+00:01:28,400 --> 00:01:34,700
+sono namida no aji wa itsuka no yakusoku
+
+24
+00:01:34,700 --> 00:01:37,000
+tada hai ni natte
+
+25
+00:01:37,000 --> 00:01:40,000
+oboroge ni natte
+
+26
+00:01:40,000 --> 00:01:42,500
+tooku dokoka e
+
+27
+00:01:42,600 --> 00:01:47,200
+kono yoru o koete ao ni somaru
+
+28
+00:01:57,900 --> 00:02:00,800
+yomosugara yume o
+
+29
+00:02:00,800 --> 00:02:03,800
+harimegurashita omoi o
+
+30
+00:02:03,900 --> 00:02:06,600
+mitsukaranai mama
+
+31
+00:02:06,600 --> 00:02:09,600
+tsuki wa kage o otoshita
+
+32
+00:02:09,600 --> 00:02:12,600
+ne mo yarazu akete
+
+33
+00:02:12,600 --> 00:02:15,600
+te mo hanasenakute
+
+34
+00:02:15,600 --> 00:02:18,200
+akogareru kimi o
+
+35
+00:02:18,200 --> 00:02:21,300
+toozakete shimatta
+
+36
+00:02:21,400 --> 00:02:27,000
+ano hi no boku no manazashi mo zenbu
+
+37
+00:02:27,200 --> 00:02:32,000
+kasunde shimatte
+
+38
+00:02:32,500 --> 00:02:36,000
+tada itakute itakute
+
+39
+00:02:36,000 --> 00:02:37,300
+tamaranai
+
+40
+00:02:37,300 --> 00:02:44,500
+sora no aosa wa fukaku iro o harande wa tsumetakute
+
+41
+00:02:44,500 --> 00:02:47,500
+tsutatte tsutatte
+
+42
+00:02:47,500 --> 00:02:49,700
+yoseau kata o
+
+43
+00:02:49,700 --> 00:02:51,300
+furuwaseta
+
+44
+00:02:51,300 --> 00:02:56,000
+kasuka na nukumori o daite wa
+
+45
+00:02:56,000 --> 00:02:58,300
+mada minu sekai e
+
+46
+00:02:58,300 --> 00:03:01,300
+hana wa kaze o matte
+
+47
+00:03:01,300 --> 00:03:03,500
+tooku dokoka e
+
+48
+00:03:03,700 --> 00:03:08,700
+kono yoru o koete ao ni somaru
+
+49
+00:03:11,400 --> 00:03:14,700
+okashite kita ayamachi mo
+
+50
+00:03:14,700 --> 00:03:18,100
+sono koukai sae mo
+
+51
+00:03:18,500 --> 00:03:29,400
+kakegae no nai mono dakara
+
+52
+00:03:40,800 --> 00:03:44,200
+tada negatte negatte
+
+53
+00:03:44,200 --> 00:03:46,400
+umarekawatte mo
+
+54
+00:03:46,400 --> 00:03:52,600
+futashika na mirai o utatte wa furetakute
+
+55
+00:03:52,800 --> 00:03:55,600
+tsutatte tsutatte
+
+56
+00:03:55,700 --> 00:03:57,900
+hoho o nagareru
+
+57
+00:03:57,900 --> 00:04:04,200
+sono namida no aji wa itsuka no yakusoku
+
+58
+00:04:04,300 --> 00:04:06,800
+tada hai ni natte
+
+59
+00:04:06,800 --> 00:04:09,400
+oboroge ni natte
+
+60
+00:04:09,400 --> 00:04:12,200
+tooku dokoka e
+
+61
+00:04:12,200 --> 00:04:17,200
+kono yoru o koete ao ni somaru

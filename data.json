@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "title": {
       "ja": "Remember",
@@ -15,7 +15,8 @@
     "mv": "mv/Remember.webm",
     "subtitle": {
       "ja": "subtitle/Remember_ja.srt",
-      "ko": "subtitle/Remember_ko.srt"
+      "ro": "subtitle/Remember_ja_ro.srt",
+      "id": "subtitle/Remember_ja_id.srt"
     }
   },
   {
@@ -34,7 +35,8 @@
     "mv": "mv/星降る海.webm",
     "subtitle": {
       "ja": "subtitle/星降る海_ja.srt",
-      "ko": "subtitle/星降る海_ko.srt"
+      "ro": "subtitle/星降る海_ja_ro.srt",
+      "id": "subtitle/星降る海_ja_id.srt"
     }
   },
   {
@@ -53,7 +55,8 @@
     "mv": "mv/私は、わたしの事が好き.webm",
     "subtitle": {
       "ja": "subtitle/私は、わたしの事が好き_ja.srt",
-      "ko": "subtitle/私は、わたしの事が好き_ko.srt"
+      "ro": "subtitle/私は、わたしの事が好き_ja_ro.srt",
+      "id": "subtitle/私は、わたしの事が好き_ja_id.srt"
     }
   },
   {
@@ -72,7 +75,8 @@
     "mv": "mv/虚ろを扇ぐ.webm",
     "subtitle": {
       "ja": "subtitle/虚ろを扇ぐ.srt",
-      "ko": "subtitle/虚ろを扇ぐ.srt"
+      "ro": "subtitle/虚ろを扇ぐ_ro.srt",
+      "id": "subtitle/虚ろを扇ぐ_id.srt"
     }
   },
   {
@@ -91,7 +95,8 @@
     "mv": "mv/ノンブレス・オブリージュ.webm",
     "subtitle": {
       "ja": "subtitle/Non-Breath_Oblige.srt",
-      "ko": "subtitle/Non-Breath_Oblige.srt"
+      "ro": "subtitle/Non-Breath_Oblige_ro.srt",
+      "id": "subtitle/Non-Breath_Oblige_id.srt"
     }
   },
   {
@@ -110,7 +115,8 @@
     "mv": "mv/Ex-Otogibanashi.webm",
     "subtitle": {
       "ja": "subtitle/Ex-Otogibanashi_ja.srt",
-      "ko": "subtitle/Ex-Otogibanashi_ko.srt"
+      "ro": "subtitle/Ex-Otogibanashi_ja_ro.srt",
+      "id": "subtitle/Ex-Otogibanashi_ja_id.srt"
     }
   },
   {
@@ -129,7 +135,8 @@
     "mv": "mv/瞬間、シンフォニー.webm",
     "subtitle": {
       "ja": "subtitle/瞬間、シンフォニー_ja.srt",
-      "ko": "subtitle/瞬間、シンフォニー_ko.srt"
+      "ro": "subtitle/瞬間、シンフォニー_ja_ro.srt",
+      "id": "subtitle/瞬間、シンフォニー_ja_id.srt"
     }
   },
   {
@@ -148,7 +155,8 @@
     "mv": "mv/Reply.webm",
     "subtitle": {
       "ja": "subtitle/Reply_ja.srt",
-      "ko": "subtitle/Reply_ko.srt"
+      "ro": "subtitle/Reply_ja_ro.srt",
+      "id": "subtitle/Reply_ja_id.srt"
     }
   },
   {
@@ -167,7 +175,8 @@
     "mv": "mv/ray.webm",
     "subtitle": {
       "ja": "subtitle/ray_ja.srt",
-      "ko": "subtitle/ray_ko.srt"
+      "ro": "subtitle/ray_ja_ro.srt",
+      "id": "subtitle/ray_ja_id.srt"
     }
   },
   {
@@ -186,7 +195,8 @@
     "mv": "mv/melt.webm",
     "subtitle": {
       "ja": "subtitle/melt_ja.srt",
-      "ko": "subtitle/melt_ko.srt"
+      "ro": "subtitle/melt_ja_ro.srt",
+      "id": "subtitle/melt_ja_id.srt"
     }
   },
   {
@@ -205,7 +215,8 @@
     "mv": "mv/蒼のワルツ.webm",
     "subtitle": {
       "ja": "subtitle/蒼のワルツ.srt",
-      "ko": "subtitle/蒼のワルツ.srt"
+      "ro": "subtitle/蒼のワルツ_ro.srt",
+      "id": "subtitle/蒼のワルツ_id.srt"
     }
   },
   {
@@ -224,7 +235,8 @@
     "mv": "mv/ロンリーユニバース.webm",
     "subtitle": {
       "ja": "subtitle/ロンリーユニバース_ja.srt",
-      "ko": "subtitle/ロンリーユニバース_ko.srt"
+      "ro": "subtitle/ロンリーユニバース_ja_ro.srt",
+      "id": "subtitle/ロンリーユニバース_ja_id.srt"
     }
   },
   {
@@ -243,7 +255,8 @@
     "mv": "mv/竹取オーバーナイトセンセーション.webm",
     "subtitle": {
       "ja": "subtitle/竹取オーバーナイトセンセーション_ja.srt",
-      "ko": "subtitle/竹取オーバーナイトセンセーション_ko.srt"
+      "ro": "subtitle/竹取オーバーナイトセンセーション_ja_ro.srt",
+      "id": "subtitle/竹取オーバーナイトセンセーション_ja_id.srt"
     }
   },
   {
@@ -262,7 +275,8 @@
     "mv": "mv/トリノコシティ.webm",
     "subtitle": {
       "ja": "subtitle/トリノコシティ_ja.srt",
-      "ko": "subtitle/トリノコシティ_ko.srt"
+      "ro": "subtitle/トリノコシティ_ja_ro.srt",
+      "id": "subtitle/トリノコシティ_ja_id.srt"
     }
   },
   {
@@ -281,7 +295,8 @@
     "mv": "mv/夢をみる島.webm",
     "subtitle": {
       "ja": "subtitle/夢をみる島_ja.srt",
-      "ko": "subtitle/夢をみる島_ko.srt"
+      "ro": "subtitle/夢をみる島_ja_ro.srt",
+      "id": "subtitle/夢をみる島_ja_id.srt"
     }
   },
   {
@@ -300,7 +315,8 @@
     "mv": "mv/Tell Your World.webm",
     "subtitle": {
       "ja": "subtitle/Tell Your World_ja.srt",
-      "ko": "subtitle/Tell Your World_ko.srt"
+      "ro": "subtitle/Tell Your World_ja_ro.srt",
+      "id": "subtitle/Tell Your World_ja_id.srt"
     }
   },
   {
@@ -319,7 +335,8 @@
     "mv": "mv/約束.webm",
     "subtitle": {
       "ja": "subtitle/Yakusoku.srt",
-      "ko": "subtitle/Yakusoku.srt"
+      "ro": "subtitle/Yakusoku_ro.srt",
+      "id": "subtitle/Yakusoku_id.srt"
     }
   },
   {
@@ -338,7 +355,8 @@
     "mv": "",
     "subtitle": {
       "ja": "subtitle/Byouka.srt",
-      "ko": "subtitle/Byouka.srt"
+      "ro": "subtitle/Byouka_ro.srt",
+      "id": "subtitle/Byouka_id.srt"
     }
   },
   {
@@ -357,7 +375,8 @@
     "mv": "mv/心海.webm",
     "subtitle": {
       "ja": "subtitle/Shinkai.srt",
-      "ko": "subtitle/Shinkai.srt"
+      "ro": "subtitle/Shinkai_ro.srt",
+      "id": "subtitle/Shinkai_id.srt"
     }
   },
   {
@@ -376,7 +395,8 @@
     "mv": "mv/ファイアダンス.webm",
     "subtitle": {
       "ja": "subtitle/FireDance.srt",
-      "ko": "subtitle/FireDance.srt"
+      "ro": "subtitle/FireDance_ro.srt",
+      "id": "subtitle/FireDance_id.srt"
     }
   }
 ]
