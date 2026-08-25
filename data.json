@@ -1,0 +1,363 @@
+[
+  {
+    "title": {
+      "ja": "Remember",
+      "ko": "Remember"
+    },
+    "artist": {
+      "ja": "yuigot & 月見ヤチヨ",
+      "ko": "yuigot & 루나미 야치요"
+    },
+    "musicFile": "music/Remember.flac",
+    "coverImage": "cover/Remember.png",
+    "default": true,
+    "default_bg": 2,
+    "mv": "mv/Remember.webm",
+    "subtitle": {
+      "ja": "subtitle/Remember_ja.srt",
+      "ko": "subtitle/Remember_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "星降る海",
+      "ko": "별이 내리는 바다"
+    },
+    "artist": {
+      "ja": "Aqu3ra & 月見ヤチヨ",
+      "ko": "Aqu3ra & 루나미 야치요"
+    },
+    "musicFile": "music/星降る海.flac",
+    "coverImage": "cover/星降る海.png",
+    "default": true,
+    "default_bg": 3,
+    "mv": "mv/星降る海.webm",
+    "subtitle": {
+      "ja": "subtitle/星降る海_ja.srt",
+      "ko": "subtitle/星降る海_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "私は、わたしの事が好き。",
+      "ko": "나는 내가 좋아."
+    },
+    "artist": {
+      "ja": "Honeyworks & かぐや",
+      "ko": "Honeyworks & 카구야"
+    },
+    "musicFile": "music/私は、わたしの事が好き.flac",
+    "coverImage": "cover/私は、わたしの事が好き.png",
+    "default": true,
+    "default_bg": 4,
+    "mv": "mv/私は、わたしの事が好き.webm",
+    "subtitle": {
+      "ja": "subtitle/私は、わたしの事が好き_ja.srt",
+      "ko": "subtitle/私は、わたしの事が好き_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "虚ろを扇ぐ",
+      "ko": "허로를 부채"
+    },
+    "artist": {
+      "ja": "Vivid BAD SQUAD | バーチャル・シンガー",
+      "ko": "Vivid BAD SQUAD | 가상 가수"
+    },
+    "musicFile": "music/虚ろを扇ぐYT.mp3",
+    "coverImage": "cover/Utsuro_wo_Aogu_Game.png",
+    "default": true,
+    "default_bg": 37,
+    "mv": "mv/虚ろを扇ぐ.webm",
+    "subtitle": {
+      "ja": "subtitle/虚ろを扇ぐ.srt",
+      "ko": "subtitle/虚ろを扇ぐ.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "ノンブレス・オブリージュ",
+      "ko": "논브레스 오블리주"
+    },
+    "artist": {
+      "ja": "25-ji, Nightcord de | 25時、ナイトコードで。",
+      "ko": "25-ji, Nightcord de | 25시, 나이트 코드에서"
+    },
+    "musicFile": "music/Non-Breath_Oblige.mp3",
+    "coverImage": "cover/Non-breath_oblige_Game_Cover.png",
+    "default": true,
+    "default_bg": 36,
+    "mv": "mv/ノンブレス・オブリージュ.webm",
+    "subtitle": {
+      "ja": "subtitle/Non-Breath_Oblige.srt",
+      "ko": "subtitle/Non-Breath_Oblige.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "Ex-Otogibanashi",
+      "ko": "Ex-Otogibanashi"
+    },
+    "artist": {
+      "ja": "ryo (supercell) & かぐや & 月見ヤチヨ",
+      "ko": "ryo (supercell) & 카구야 & 루나미 야치요"
+    },
+    "musicFile": "music/Ex-Otogibanashi.flac",
+    "coverImage": "cover/Ex-Otogibanashi.png",
+    "default": true,
+    "default_bg": 7,
+    "mv": "mv/Ex-Otogibanashi.webm",
+    "subtitle": {
+      "ja": "subtitle/Ex-Otogibanashi_ja.srt",
+      "ko": "subtitle/Ex-Otogibanashi_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "瞬間、シンフォニー。",
+      "ko": "순간, 심포니."
+    },
+    "artist": {
+      "ja": "40mP & かぐや",
+      "ko": "40mP & 카구야"
+    },
+    "musicFile": "music/瞬間、シンフォニー.flac",
+    "coverImage": "cover/瞬間、シンフォニー.png",
+    "default": true,
+    "default_bg": 8,
+    "mv": "mv/瞬間、シンフォニー.webm",
+    "subtitle": {
+      "ja": "subtitle/瞬間、シンフォニー_ja.srt",
+      "ko": "subtitle/瞬間、シンフォニー_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "Reply",
+      "ko": "Reply"
+    },
+    "artist": {
+      "ja": "kz & かぐや",
+      "ko": "kz & 카구야"
+    },
+    "musicFile": "music/Reply.flac",
+    "coverImage": "cover/Reply.png",
+    "default": true,
+    "default_bg": 9,
+    "mv": "mv/Reply.webm",
+    "subtitle": {
+      "ja": "subtitle/Reply_ja.srt",
+      "ko": "subtitle/Reply_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "ray (CPK! Ver.)",
+      "ko": "ray (CPK! Ver.)"
+    },
+    "artist": {
+      "ja": "かぐや & 月見ヤチヨ",
+      "ko": "카구야 & 루나미 야치요"
+    },
+    "musicFile": "music/ray.flac",
+    "coverImage": "cover/ray.png",
+    "default": true,
+    "default_bg": 10,
+    "mv": "mv/ray.webm",
+    "subtitle": {
+      "ja": "subtitle/ray_ja.srt",
+      "ko": "subtitle/ray_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "メルト CPK! Remix (かぐや ver.)",
+      "ko": "멜트 CPK! Remix (카구야 ver.)"
+    },
+    "artist": {
+      "ja": "ryo (supercell) & かぐや",
+      "ko": "ryo (supercell) & 카구야"
+    },
+    "musicFile": "music/melt.flac",
+    "coverImage": "cover/melt.png",
+    "default": true,
+    "default_bg": 11,
+    "mv": "mv/melt.webm",
+    "subtitle": {
+      "ja": "subtitle/melt_ja.srt",
+      "ko": "subtitle/melt_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "蒼のワルツ",
+      "ko": "푸른 왈츠"
+    },
+    "artist": {
+      "ja": "Eve",
+      "ko": "Eve"
+    },
+    "musicFile": "music/蒼のワルツ.mp3",
+    "coverImage": "cover/josee.png",
+    "default": true,
+    "default_bg": 32,
+    "mv": "mv/蒼のワルツ.webm",
+    "subtitle": {
+      "ja": "subtitle/蒼のワルツ1.srt",
+      "ko": "subtitle/蒼のワルツ1.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "ロンリーユニバース (COVER)",
+      "ko": "론리 유니버스 (COVER)"
+    },
+    "artist": {
+      "ja": "Aqu3ra & 月見ヤチヨ",
+      "ko": "Aqu3ra & 루나미 야치요"
+    },
+    "musicFile": "music/ロンリーユニバース.mp3",
+    "coverImage": "cover/ロンリーユニバース.png",
+    "default": true,
+    "default_bg": 12,
+    "mv": "mv/ロンリーユニバース.webm",
+    "subtitle": {
+      "ja": "subtitle/ロンリーユニバース_ja.srt",
+      "ko": "subtitle/ロンリーユニバース_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "竹取オーバーナイトセンセーション (COVER)",
+      "ko": "타케토리 오버나이트 센세이션 (COVER)"
+    },
+    "artist": {
+      "ja": "Honeyworks & かぐや",
+      "ko": "Honeyworks & 카구야"
+    },
+    "musicFile": "music/竹取オーバーナイトセンセーション.mp3",
+    "coverImage": "cover/竹取オーバーナイトセンセーション.png",
+    "default": true,
+    "default_bg": 13,
+    "mv": "mv/竹取オーバーナイトセンセーション.webm",
+    "subtitle": {
+      "ja": "subtitle/竹取オーバーナイトセンセーション_ja.srt",
+      "ko": "subtitle/竹取オーバーナイトセンセーション_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "トリノコシティ (COVER)",
+      "ko": "토리노코시티 (COVER)"
+    },
+    "artist": {
+      "ja": "40mp & 月見ヤチヨ",
+      "ko": "40mp & 루나미 야치요"
+    },
+    "musicFile": "music/トリノコシティ.mp3",
+    "coverImage": "cover/トリノコシティ.png",
+    "default": true,
+    "default_bg": 14,
+    "mv": "mv/トリノコシティ.webm",
+    "subtitle": {
+      "ja": "subtitle/トリノコシティ_ja.srt",
+      "ko": "subtitle/トリノコシティ_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "夢をみる島 (COVER)",
+      "ko": "꿈꾸는 섬 (COVER)"
+    },
+    "artist": {
+      "ja": "yuigot & かぐや",
+      "ko": "yuigot & 카구야"
+    },
+    "musicFile": "music/夢をみる島.mp3",
+    "coverImage": "cover/夢をみる島.png",
+    "default": true,
+    "default_bg": 15,
+    "mv": "mv/夢をみる島.webm",
+    "subtitle": {
+      "ja": "subtitle/夢をみる島_ja.srt",
+      "ko": "subtitle/夢をみる島_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "Tell Your World (COVER)",
+      "ko": "Tell Your World (COVER)"
+    },
+    "artist": {
+      "ja": "kz & 月見ヤチヨ",
+      "ko": "kz & 루나미 야치요"
+    },
+    "musicFile": "music/Tell Your World.mp3",
+    "coverImage": "cover/Tell Your World.png",
+    "default": true,
+    "default_bg": 16,
+    "mv": "mv/Tell Your World.webm",
+    "subtitle": {
+      "ja": "subtitle/Tell Your World_ja.srt",
+      "ko": "subtitle/Tell Your World_ko.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "約束",
+      "ko": "약속"
+    },
+    "artist": {
+      "ja": "Eve",
+      "ko": "Eve"
+    },
+    "musicFile": "music/Yakusoku.mp3",
+    "coverImage": "cover/EveAlbum.png",
+    "default": true,
+    "default_bg": 33,
+    "mv": "mv/約束.webm",
+    "subtitle": {
+      "ja": "subtitle/Yakusoku.srt",
+      "ko": "subtitle/Yakusoku.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "杪夏",
+      "ko": "杪夏"
+    },
+    "artist": {
+      "ja": "Eve",
+      "ko": "Eve"
+    },
+    "musicFile": "music/Byouka.mp3",
+    "coverImage": "cover/EveAlbum.png",
+    "default": true,
+    "default_bg": 34,
+    "mv": "",
+    "subtitle": {
+      "ja": "subtitle/Byouka.srt",
+      "ko": "subtitle/Byouka.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "心海",
+      "ko": "심해"
+    },
+    "artist": {
+      "ja": "Eve",
+      "ko": "Eve"
+    },
+    "musicFile": "music/Shinkai.mp3",
+    "coverImage": "cover/josee.png",
+    "default": true,
+    "default_bg": 38,
+    "mv": "mv/心海.webm",
+    "subtitle": {
+      "ja": "subtitle/Shinkai.srt",
+      "ko": "subtitle/Shinkai.srt"
+    }
+  }
+]
