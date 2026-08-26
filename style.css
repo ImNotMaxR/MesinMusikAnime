@@ -928,8 +928,15 @@ body.mirror-mode #subtitle-widget:not([data-sub-state="0"]):hover .sub-controls-
     transition: all 0.2s ease;
 }
 
-.sub-btn:hover:not(:disabled) {
+.sub-btn:hover:not(:disabled):not(.active) {
     background: rgba(var(--text-color-rgb), 0.3);
+}
+
+/* Active button stays the same on hover - do not dim/change it */
+.sub-btn.active:hover:not(:disabled) {
+    background: var(--main-color);
+    border-color: var(--main-color);
+    opacity: 0.85;
 }
 
 .sub-btn.active {

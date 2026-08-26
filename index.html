@@ -163,13 +163,13 @@
                 <section id="subtitle-widget" class="glass show" data-sub-state="0">
                     <div class="sub-controls sub-controls-left">
                         <button class="sub-btn" data-side="left" data-lang="ja">JA</button>
-                        <button class="sub-btn" data-side="left" data-lang="ko">KO</button>
+                        <button class="sub-btn" data-side="left" data-lang="ko" style="display: none;">KO</button>
                         <button class="sub-btn" data-side="left" data-lang="id">ID</button>
                         <button class="sub-btn" data-side="left" data-lang="ro">RO</button>
                     </div>
                     <div class="sub-controls sub-controls-right">
                         <button class="sub-btn" data-side="right" data-lang="ja">JA</button>
-                        <button class="sub-btn" data-side="right" data-lang="ko">KO</button>
+                        <button class="sub-btn" data-side="right" data-lang="ko" style="display: none;">KO</button>
                         <button class="sub-btn" data-side="right" data-lang="id">ID</button>
                         <button class="sub-btn" data-side="right" data-lang="ro">RO</button>
                     </div>
@@ -827,6 +827,408 @@
 
                 setTimeout(checkActiveBackground, 500);
             });
+        })();
+    </script>
+
+    <script>
+        // =====================================================================
+        // SUBTITLE MULTI-LANGUAGE PATCH v2
+        //
+        // script.js runs in an IIFE - its internal vars (leftSubLang, etc.) are
+        // NOT accessible as window properties. So this patch implements a fully
+        // independent subtitle engine for non-ja/ko languages (id, ro, etc.),
+        // while leaving ja/ko to the original engine.
+        //
+        // Strategy:
+        //   - Track our own patchLeft / patchRight state variables
+        //   - Intercept clicks on id/ro buttons (capture phase, stop propagation)
+        //   - Fetch & parse SRT, then sync with audio via requestAnimationFrame
+        //   - Render into the same DOM containers as the original engine
+        //   - Also refresh active-class on ALL sub-btn buttons every frame
+        // =====================================================================
+        (function () {
+            'use strict';
+
+            // Languages managed by the original engine (no interception needed)
+            const ORIG_LANGS = new Set(['ja', 'ko']);
+
+            // Our internal state
+            let patchLeft = null;   // lang code managed by us on left panel
+            let patchRight = null;  // lang code managed by us on right panel
+
+            // Cue arrays for our managed panels
+            let cuesLeft = null;
+            let cuesRight = null;
+
+            // rAF handle
+            let rafId = null;
+
+            // ----------------------------------------------------------------
+            // SRT Parser
+            // ----------------------------------------------------------------
+            function parseSRT(text) {
+                const lines = text.replace(/\r/g, '').split('\n');
+                const cues = [];
+                let i = 0;
+                while (i < lines.length) {
+                    if (!lines[i] || !lines[i].trim()) { i++; continue; }
+                    if (/^\d+$/.test(lines[i].trim())) { i++; }
+                    const line = lines[i] || '';
+                    const tc = line.match(
+                        /(\d{2}):(\d{2}):(\d{2})[,.](\d{3})\s*--\x3e\s*(\d{2}):(\d{2}):(\d{2})[,.](\d{3})/);
+                    if (!tc) { i++; continue; }
+                    const ts = (h, m, s, ms) =>
+                        +h * 3600 + +m * 60 + +s + +ms / 1000;
+                    const start = ts(tc[1], tc[2], tc[3], tc[4]);
+                    const end = ts(tc[5], tc[6], tc[7], tc[8]);
+                    i++;
+                    const parts = [];
+                    while (i < lines.length && lines[i].trim() !== '') {
+                        parts.push(lines[i]);
+                        i++;
+                    }
+                    if (parts.length) cues.push({ start, end, text: parts.join('\n') });
+                }
+                return cues;
+            }
+
+            async function fetchSRT(url) {
+                if (!url) return null;
+                try {
+                    const r = await fetch(url);
+                    if (!r.ok) return null;
+                    return parseSRT(await r.text());
+                } catch (e) { return null; }
+            }
+
+            // ----------------------------------------------------------------
+            // Get current song data
+            // ----------------------------------------------------------------
+            function getCurrentSong() {
+                if (typeof playlist !== 'undefined' && typeof currentIndex !== 'undefined') {
+                    return playlist[currentIndex] || null;
+                }
+                return null;
+            }
+
+            function getSubtitleUrl(lang) {
+                const song = getCurrentSong();
+                if (!song || !song.subtitle || !song.subtitle[lang]) return null;
+                const rawUrl = song.subtitle[lang];
+                // If it's already an absolute URL (script.js added the prefix), use as-is
+                if (rawUrl.startsWith('http') || rawUrl.startsWith('file')) return rawUrl;
+                // Otherwise prepend the base URL of this page
+                const base = window.location.href.replace(/\/[^/]*$/, '/');
+                return base + rawUrl;
+            }
+
+            // ----------------------------------------------------------------
+            // Find cue at a given time
+            // ----------------------------------------------------------------
+            function getCueAt(cues, t) {
+                if (!cues) return null;
+                // Simple linear search (good enough for subtitle cues)
+                for (let i = 0; i < cues.length; i++) {
+                    if (t >= cues[i].start && t < cues[i].end) return cues[i];
+                }
+                return null;
+            }
+
+            function getNextCue(cues, t) {
+                if (!cues) return null;
+                let best = null;
+                for (let i = 0; i < cues.length; i++) {
+                    if (cues[i].start > t) {
+                        if (!best || cues[i].start < best.start) best = cues[i];
+                    }
+                }
+                return best;
+            }
+
+            // ----------------------------------------------------------------
+            // Render subtitle text into container
+            // ----------------------------------------------------------------
+            function renderIntoContainer(container, currentText, nextText) {
+                if (!container) return;
+                const curEl = container.querySelector('.current-sub');
+                const nxtEl = container.querySelector('.next-sub');
+                if (curEl && curEl.textContent !== (currentText || '')) {
+                    curEl.innerHTML = currentText
+                        ? currentText.replace(/\n/g, '<br>')
+                        : '';
+                }
+                if (nxtEl && nxtEl.textContent !== (nextText || '')) {
+                    nxtEl.innerHTML = nextText
+                        ? nextText.replace(/\n/g, '<br>')
+                        : '';
+                }
+                // Apply mode class
+                if (currentText) {
+                    container.classList.remove('sub-mode-empty', 'sub-mode-gap', 'sub-mode-centered');
+                    container.classList.add('sub-mode-normal');
+                } else {
+                    container.classList.remove('sub-mode-normal', 'sub-mode-gap');
+                    container.classList.add('sub-mode-empty');
+                }
+            }
+
+            // ----------------------------------------------------------------
+            // rAF loop - renders our managed panels
+            // ----------------------------------------------------------------
+            function renderLoop() {
+                rafId = requestAnimationFrame(renderLoop);
+
+                const audio = document.getElementById('audio-player');
+                const t = audio ? audio.currentTime : 0;
+
+                // Left panel
+                if (patchLeft) {
+                    const ctr = document.getElementById('subtitle-container-left');
+                    const cur = getCueAt(cuesLeft, t);
+                    const nxt = getNextCue(cuesLeft, t);
+                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null);
+                }
+
+                // Right panel
+                if (patchRight) {
+                    const ctr = document.getElementById('subtitle-container-right');
+                    const cur = getCueAt(cuesRight, t);
+                    const nxt = getNextCue(cuesRight, t);
+                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null);
+                }
+
+                // Always refresh button active states
+                refreshBtnStates();
+            }
+
+            function startLoop() {
+                if (!rafId) rafId = requestAnimationFrame(renderLoop);
+            }
+
+            // ----------------------------------------------------------------
+            // Button active-state refresh
+            // Read the original engine's ja/ko state from the DOM (via active
+            // class on ja/ko buttons), combine with our patchLeft/patchRight.
+            // ----------------------------------------------------------------
+            function refreshBtnStates() {
+                document.querySelectorAll('.sub-btn').forEach(btn => {
+                    const side = btn.dataset.side;
+                    const lang = btn.dataset.lang;
+                    if (!side || !lang) return;
+
+                    let isActive = false;
+                    if (side === 'left') {
+                        if (ORIG_LANGS.has(lang)) {
+                            // Trust the original engine's class, just don't override
+                            return;
+                        } else {
+                            isActive = (patchLeft === lang);
+                        }
+                    } else {
+                        if (ORIG_LANGS.has(lang)) {
+                            return;
+                        } else {
+                            isActive = (patchRight === lang);
+                        }
+                    }
+
+                    btn.classList.toggle('active', isActive);
+                    // Disable if opposite side has the same lang
+                    if (side === 'left') {
+                        btn.disabled = (lang === patchRight);
+                    } else {
+                        btn.disabled = (lang === patchLeft);
+                    }
+                });
+            }
+
+            // ----------------------------------------------------------------
+            // Apply UI layout (sub-side-right visibility, data-sub-state, etc.)
+            // ----------------------------------------------------------------
+            function applyPatchLayout() {
+                const subSideRight = document.getElementById('sub-side-right');
+                const subDivider = document.getElementById('sub-divider');
+                const widget = document.getElementById('subtitle-widget');
+
+                // Check if original engine also has a right panel active
+                // by reading rightSubLang. We can't access it directly since
+                // it's in the IIFE, but we can check if sub-side-right is visible.
+                const origRightVisible = subSideRight &&
+                    subSideRight.style.display !== 'none' &&
+                    !patchRight;
+
+                // If we have patchRight, show the right panel
+                if (patchRight) {
+                    if (subSideRight) subSideRight.style.display = '';
+                    if (subDivider) subDivider.style.display = '';
+                }
+
+                // Update data-sub-state for CSS hover logic
+                if (widget) {
+                    const hasLeft = !!patchLeft;
+                    const hasRight = !!patchRight || origRightVisible;
+                    let state = '0';
+                    if (hasLeft && hasRight) state = '1';
+                    else if (!hasLeft && hasRight) state = '2';
+                    widget.setAttribute('data-sub-state', state);
+                }
+            }
+
+            // ----------------------------------------------------------------
+            // Load subtitle for a managed panel
+            // ----------------------------------------------------------------
+            async function loadPanelSubtitle(side) {
+                const lang = side === 'left' ? patchLeft : patchRight;
+                const cues = lang ? await fetchSRT(getSubtitleUrl(lang)) : null;
+                if (side === 'left') cuesLeft = cues;
+                else cuesRight = cues;
+            }
+
+            // ----------------------------------------------------------------
+            // Handle song change: reload subtitle if our managed lang is active
+            // ----------------------------------------------------------------
+            function onSongChange() {
+                if (patchLeft) loadPanelSubtitle('left');
+                if (patchRight) loadPanelSubtitle('right');
+            }
+
+            // ----------------------------------------------------------------
+            // Click interceptor for non-ja/ko buttons
+            // ----------------------------------------------------------------
+            function onDocumentClick(e) {
+                const btn = e.target.closest('.sub-btn');
+                if (!btn) return;
+
+                const side = btn.dataset.side;
+                const lang = btn.dataset.lang;
+                if (!side || !lang) return;
+
+                // Only intercept languages we manage (non-ja, non-ko)
+                if (ORIG_LANGS.has(lang)) {
+                    // Let original handler run. After it finishes we sync our UI.
+                    setTimeout(() => {
+                        // If original engine reset one of our panels, clear it
+                        // (this happens when original sets leftSubLang to ja/ko
+                        //  which may hide or show panels)
+                        applyPatchLayout();
+                        refreshBtnStates();
+                    }, 80);
+                    return;
+                }
+
+                // Stop the original engine from handling this click
+                e.stopImmediatePropagation();
+
+                // Deactivate any original engine (ja/ko) selection on the SAME side
+                // by finding the currently-active ja/ko button on that side and clicking it
+                // (which the original engine will handle via bubbling since we removed our stop)
+                function deactivateOriginalOnSide(targetSide) {
+                    const activeBtns = document.querySelectorAll(
+                        `.sub-btn[data-side="${targetSide}"].active`);
+                    activeBtns.forEach(b => {
+                        if (ORIG_LANGS.has(b.dataset.lang)) {
+                            // Dispatch a real click to let original engine deselect it
+                            b.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+                        }
+                    });
+                }
+
+
+                if (side === 'left') {
+                    // Toggle: click again to deselect
+                    if (patchLeft === lang) {
+                        patchLeft = null;
+                        cuesLeft = null;
+                        // Clear the container
+                        const ctr = document.getElementById('subtitle-container-left');
+                        if (ctr) {
+                            const c = ctr.querySelector('.current-sub');
+                            const n = ctr.querySelector('.next-sub');
+                            if (c) c.innerHTML = '';
+                            if (n) n.innerHTML = '';
+                        }
+                    } else {
+                        // Deactivate original engine on this side first
+                        deactivateOriginalOnSide('left');
+                        patchLeft = lang;
+                        // If patchLeft === patchRight, clear right
+                        if (patchLeft === patchRight) {
+                            patchRight = null;
+                            cuesRight = null;
+                        }
+                        loadPanelSubtitle('left');
+                    }
+                } else {
+                    if (patchRight === lang) {
+                        patchRight = null;
+                        cuesRight = null;
+                        const ctr = document.getElementById('subtitle-container-right');
+                        if (ctr) {
+                            const c = ctr.querySelector('.current-sub');
+                            const n = ctr.querySelector('.next-sub');
+                            if (c) c.innerHTML = '';
+                            if (n) n.innerHTML = '';
+                        }
+                        // Hide right panel if original engine also doesn't use it
+                        const subSideRight = document.getElementById('sub-side-right');
+                        const subDivider = document.getElementById('sub-divider');
+                        if (subSideRight) subSideRight.style.display = 'none';
+                        if (subDivider) subDivider.style.display = 'none';
+                    } else {
+                        // Deactivate original engine on right side first
+                        deactivateOriginalOnSide('right');
+                        patchRight = lang;
+                        if (patchRight === patchLeft) {
+                            patchLeft = null;
+                            cuesLeft = null;
+                        }
+                        loadPanelSubtitle('right');
+                    }
+                }
+
+                applyPatchLayout();
+                refreshBtnStates();
+            }
+
+            // ----------------------------------------------------------------
+            // Watch for song changes using MutationObserver on track title
+            // ----------------------------------------------------------------
+            function watchSongChanges() {
+                const titleEl = document.getElementById('track-title');
+                if (!titleEl) return;
+                let lastTitle = titleEl.textContent;
+                const obs = new MutationObserver(() => {
+                    const newTitle = titleEl.textContent;
+                    if (newTitle !== lastTitle) {
+                        lastTitle = newTitle;
+                        onSongChange();
+                    }
+                });
+                obs.observe(titleEl, { childList: true, characterData: true, subtree: true });
+            }
+
+            // ----------------------------------------------------------------
+            // Initialization
+            // ----------------------------------------------------------------
+            function init() {
+                // Register click interceptor (capture = true so we run FIRST)
+                document.addEventListener('click', onDocumentClick, true);
+
+                // Start render loop
+                startLoop();
+
+                // Watch for song changes
+                watchSongChanges();
+
+                console.log('[SubtitlePatch v2] Ready - supporting id, ro, and any other languages from data.json');
+            }
+
+            // Start after DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
         })();
     </script>
 </body>
