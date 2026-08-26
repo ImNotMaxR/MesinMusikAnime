@@ -398,5 +398,65 @@
       "ro": "subtitle/FireDance_ro.srt",
       "id": "subtitle/FireDance_id.srt"
     }
+  },
+  {
+    "title": {
+      "ja": "カナデトモスソラ",
+      "ko": "카나데토모스소라"
+    },
+    "artist": {
+      "ja": "25-ji, Nightcord de | 25時、ナイトコードで。",
+      "ko": "25시, 나이트코드에서"
+    },
+    "musicFile": "music/カナデトモスソラ.mp3",
+    "coverImage": "cover/kanadetomosora.png",
+    "default": true,
+    "default_bg": 40,
+    "mv": "mv/カナデトモスソラ.webm",
+    "subtitle": {
+      "ja": "subtitle/kanadetomosora.srt",
+      "ro": "subtitle/kanadetomosora_ro.srt",
+      "id": "subtitle/kanadetomosora_id.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "余花にみとれて",
+      "ko": "여화에 넋을 잃고"
+    },
+    "artist": {
+      "ja": "25-ji, Nightcord de | 25時、ナイトコードで。",
+      "ko": "25시, 나이트코드에서"
+    },
+    "musicFile": "music/余花にみとれて.mp3",
+    "coverImage": "cover/yokanimitorete.png",
+    "default": true,
+    "default_bg": 41,
+    "mv": "mv/余花にみとれて.webm",
+    "subtitle": {
+      "ja": "subtitle/yokanimitorete.srt",
+      "ro": "subtitle/yokanimitorete_ro.srt",
+      "id": "subtitle/yokanimitorete_id.srt"
+    }
+  },
+  {
+    "title": {
+      "ja": "そこに在る、光。",
+      "ko": "그곳에 있는, 빛."
+    },
+    "artist": {
+      "ja": "25-ji, Nightcord de | 25時、ナイトコードで。",
+      "ko": "25시, 나이트코드에서"
+    },
+    "musicFile": "music/sokoniaruhikari.mp3",
+    "coverImage": "cover/sokoniaruhikari.png",
+    "default": true,
+    "default_bg": 42,
+    "mv": "mv/そこに在る、光。.webm",
+    "subtitle": {
+      "ja": "subtitle/sokoniaruhikari.srt",
+      "ro": "subtitle/sokoniaruhikari_ro.srt",
+      "id": "subtitle/sokoniaruhikari_id.srt"
+    }
   }
 ]
