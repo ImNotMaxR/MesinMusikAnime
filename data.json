@@ -8,7 +8,7 @@
       "ja": "yuigot & 月見ヤチヨ",
       "ko": "yuigot & 루나미 야치요"
     },
-    "musicFile": "music/Remember.flac",
+    "musicFile": "music/Remember.mp3",
     "coverImage": "cover/Remember.png",
     "default": true,
     "default_bg": 2,
@@ -28,7 +28,7 @@
       "ja": "Aqu3ra & 月見ヤチヨ",
       "ko": "Aqu3ra & 루나미 야치요"
     },
-    "musicFile": "music/星降る海.flac",
+    "musicFile": "music/星降る海.mp3",
     "coverImage": "cover/星降る海.png",
     "default": true,
     "default_bg": 3,
@@ -48,7 +48,7 @@
       "ja": "Honeyworks & かぐや",
       "ko": "Honeyworks & 카구야"
     },
-    "musicFile": "music/私は、わたしの事が好き.flac",
+    "musicFile": "music/私は、わたしの事が好き.mp3",
     "coverImage": "cover/私は、わたしの事が好き.png",
     "default": true,
     "default_bg": 4,
@@ -108,7 +108,7 @@
       "ja": "ryo (supercell) & かぐや & 月見ヤチヨ",
       "ko": "ryo (supercell) & 카구야 & 루나미 야치요"
     },
-    "musicFile": "music/Ex-Otogibanashi.flac",
+    "musicFile": "music/Ex-Otogibanashi.mp3",
     "coverImage": "cover/Ex-Otogibanashi.png",
     "default": true,
     "default_bg": 7,
@@ -128,7 +128,7 @@
       "ja": "40mP & かぐや",
       "ko": "40mP & 카구야"
     },
-    "musicFile": "music/瞬間、シンフォニー.flac",
+    "musicFile": "music/瞬間、シンフォニー.mp3",
     "coverImage": "cover/瞬間、シンフォニー.png",
     "default": true,
     "default_bg": 8,
@@ -148,7 +148,7 @@
       "ja": "kz & かぐや",
       "ko": "kz & 카구야"
     },
-    "musicFile": "music/Reply.flac",
+    "musicFile": "music/Reply.mp3",
     "coverImage": "cover/Reply.png",
     "default": true,
     "default_bg": 9,
@@ -168,7 +168,7 @@
       "ja": "かぐや & 月見ヤチヨ",
       "ko": "카구야 & 루나미 야치요"
     },
-    "musicFile": "music/ray.flac",
+    "musicFile": "music/ray.mp3",
     "coverImage": "cover/ray.png",
     "default": true,
     "default_bg": 10,
@@ -188,7 +188,7 @@
       "ja": "ryo (supercell) & かぐや",
       "ko": "ryo (supercell) & 카구야"
     },
-    "musicFile": "music/melt.flac",
+    "musicFile": "music/melt.mp3",
     "coverImage": "cover/melt.png",
     "default": true,
     "default_bg": 11,
