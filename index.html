@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -863,6 +863,14 @@
             // rAF handle
             let rafId = null;
 
+            // Track last rendered cue IDs to detect changes and trigger animation
+            let lastCueLeft = null;   // { text: '' } tracker object
+            let lastCueRight = null;
+
+            // Semaphore: when true, our capture handler skips interception so
+            // synthetic clicks reach the original engine directly.
+            let _bypassIntercept = false;
+
             // ----------------------------------------------------------------
             // SRT Parser
             // ----------------------------------------------------------------
@@ -947,28 +955,127 @@
 
             // ----------------------------------------------------------------
             // Render subtitle text into container
+            // Uses the same rolling-up animation as the original JA engine.
             // ----------------------------------------------------------------
-            function renderIntoContainer(container, currentText, nextText) {
+            function renderIntoContainer(container, currentText, nextText, lastCueRef) {
                 if (!container) return;
                 const curEl = container.querySelector('.current-sub');
                 const nxtEl = container.querySelector('.next-sub');
-                if (curEl && curEl.textContent !== (currentText || '')) {
-                    curEl.innerHTML = currentText
-                        ? currentText.replace(/\n/g, '<br>')
-                        : '';
-                }
-                if (nxtEl && nxtEl.textContent !== (nextText || '')) {
-                    nxtEl.innerHTML = nextText
-                        ? nextText.replace(/\n/g, '<br>')
-                        : '';
-                }
-                // Apply mode class
+
+                // Determine target mode (consider long text)
+                let targetMode;
                 if (currentText) {
-                    container.classList.remove('sub-mode-empty', 'sub-mode-gap', 'sub-mode-centered');
-                    container.classList.add('sub-mode-normal');
+                    targetMode = isLongText(currentText) ? 'long' : 'normal';
                 } else {
-                    container.classList.remove('sub-mode-normal', 'sub-mode-gap');
-                    container.classList.add('sub-mode-empty');
+                    targetMode = nextText ? 'gap' : 'empty';
+                }
+                const targetClass = 'target-' + targetMode;
+
+                // Detect cue change: compare currentText identity
+                const cueChanged = (currentText || '') !== (lastCueRef.text || '');
+
+                if (cueChanged) {
+                    // Update lastCueRef text
+                    lastCueRef.text = currentText || '';
+
+                    // Set next-sub content to the incoming current text BEFORE animation
+                    // so it slides into view as the "next" element
+                    if (nxtEl) {
+                        nxtEl.innerHTML = currentText
+                            ? currentText.replace(/\n/g, '<br>')
+                            : '';
+                    }
+
+                    // Trigger rolling-up animation
+                    container.classList.remove(
+                        'rolling-up', 'target-normal', 'target-centered',
+                        'target-gap', 'target-empty', 'target-long'
+                    );
+
+                    // Force reflow to restart animation
+                    void container.offsetWidth;
+
+                    container.classList.add('rolling-up', targetClass);
+
+                    // After transition completes (0.4s), finalize state
+                    setTimeout(() => {
+                        // CRITICAL: disable CSS transitions BEFORE removing rolling-up.
+                        // Without this, when rolling-up is removed the browser transitions
+                        // curEl from -160% → -80% and nxtEl from -80% → 0% (both going
+                        // "DOWN" / "turun"), creating the unwanted naik-turun double animation.
+                        if (curEl) curEl.style.transition = 'none';
+                        if (nxtEl) nxtEl.style.transition = 'none';
+
+                        // Remove animation classes (elements snap instantly to mode positions)
+                        container.classList.remove('rolling-up', targetClass);
+
+                        // Update content while transitions are disabled (no visible flash)
+                        if (curEl) {
+                            curEl.innerHTML = currentText
+                                ? currentText.replace(/\n/g, '<br>')
+                                : '';
+                        }
+                        if (nxtEl) {
+                            nxtEl.innerHTML = nextText
+                                ? nextText.replace(/\n/g, '<br>')
+                                : '';
+                        }
+
+                        // Apply stable mode class (instant, transitions still off)
+                        applyModeClass(container, currentText, nextText);
+
+                        // Force reflow to commit all instant changes
+                        void container.offsetWidth;
+
+                        // Re-enable transitions for future cue changes
+                        if (curEl) curEl.style.transition = '';
+                        if (nxtEl) nxtEl.style.transition = '';
+                    }, 420);
+                } else {
+                    // No cue change — only update next-sub when NOT animating.
+                    // CRITICAL: if we update nxtEl during rolling-up, the text
+                    // that is sliding INTO view gets replaced with the upcoming
+                    // cue text, causing the wrong subtitle to flash briefly.
+                    if (!container.classList.contains('rolling-up')) {
+                        const nextContent = nextText ? nextText.replace(/\n/g, '<br>') : '';
+                        if (nxtEl && nxtEl.innerHTML !== nextContent) {
+                            nxtEl.innerHTML = nextContent;
+                        }
+                        applyModeClass(container, currentText, nextText);
+                    }
+                }
+            }
+
+            // Threshold: strings longer than this (or multi-line) use 'long' mode
+            const LONG_TEXT_THRESHOLD = 42;
+
+            function isLongText(text) {
+                if (!text) return false;
+                return text.length > LONG_TEXT_THRESHOLD || text.includes('\n');
+            }
+
+            function applyModeClass(container, currentText, nextText) {
+                // Determine the correct target class
+                let targetClass;
+                if (currentText) {
+                    targetClass = isLongText(currentText) ? 'sub-mode-long' : 'sub-mode-normal';
+                } else if (nextText) {
+                    targetClass = 'sub-mode-gap';
+                } else {
+                    targetClass = 'sub-mode-empty';
+                }
+
+                // CRITICAL: only change the class when it actually needs to change.
+                // Calling remove() + add() on every rAF frame (60fps) causes the
+                // browser to briefly compute a new transform value when the class is
+                // removed, triggering a CSS transition each time — the "naik turun"
+                // (up-down flicker) bug.
+                if (!container.classList.contains(targetClass)) {
+                    container.classList.remove(
+                        'sub-mode-normal', 'sub-mode-empty', 'sub-mode-gap',
+                        'sub-mode-centered', 'sub-mode-long'
+                    );
+                    container.classList.add(targetClass);
                 }
             }
 
@@ -986,7 +1093,8 @@
                     const ctr = document.getElementById('subtitle-container-left');
                     const cur = getCueAt(cuesLeft, t);
                     const nxt = getNextCue(cuesLeft, t);
-                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null);
+                    if (!lastCueLeft) lastCueLeft = { text: '' };
+                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null, lastCueLeft);
                 }
 
                 // Right panel
@@ -994,7 +1102,8 @@
                     const ctr = document.getElementById('subtitle-container-right');
                     const cur = getCueAt(cuesRight, t);
                     const nxt = getNextCue(cuesRight, t);
-                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null);
+                    if (!lastCueRight) lastCueRight = { text: '' };
+                    renderIntoContainer(ctr, cur ? cur.text : null, nxt ? nxt.text : null, lastCueRight);
                 }
 
                 // Always refresh button active states
@@ -1007,8 +1116,8 @@
 
             // ----------------------------------------------------------------
             // Button active-state refresh
-            // Read the original engine's ja/ko state from the DOM (via active
-            // class on ja/ko buttons), combine with our patchLeft/patchRight.
+            // For ORIG_LANGS (ja/ko): remove active class if patch controls that side.
+            // For patch langs (id/ro): set active based on patchLeft/patchRight.
             // ----------------------------------------------------------------
             function refreshBtnStates() {
                 document.querySelectorAll('.sub-btn').forEach(btn => {
@@ -1016,29 +1125,23 @@
                     const lang = btn.dataset.lang;
                     if (!side || !lang) return;
 
-                    let isActive = false;
-                    if (side === 'left') {
-                        if (ORIG_LANGS.has(lang)) {
-                            // Trust the original engine's class, just don't override
-                            return;
-                        } else {
-                            isActive = (patchLeft === lang);
+                    if (ORIG_LANGS.has(lang)) {
+                        // If patch is controlling this side, force-deactivate JA/KO buttons
+                        if (side === 'left' && patchLeft) {
+                            btn.classList.remove('active');
+                        } else if (side === 'right' && patchRight) {
+                            btn.classList.remove('active');
                         }
-                    } else {
-                        if (ORIG_LANGS.has(lang)) {
-                            return;
-                        } else {
-                            isActive = (patchRight === lang);
-                        }
+                        // Otherwise let original engine manage its own active class
+                        return;
                     }
 
+                    // Patch-managed buttons
+                    const isActive = (side === 'left') ? (patchLeft === lang) : (patchRight === lang);
                     btn.classList.toggle('active', isActive);
+
                     // Disable if opposite side has the same lang
-                    if (side === 'left') {
-                        btn.disabled = (lang === patchRight);
-                    } else {
-                        btn.disabled = (lang === patchLeft);
-                    }
+                    btn.disabled = (side === 'left') ? (lang === patchRight) : (lang === patchLeft);
                 });
             }
 
@@ -1050,26 +1153,27 @@
                 const subDivider = document.getElementById('sub-divider');
                 const widget = document.getElementById('subtitle-widget');
 
-                // Check if original engine also has a right panel active
-                // by reading rightSubLang. We can't access it directly since
-                // it's in the IIFE, but we can check if sub-side-right is visible.
-                const origRightVisible = subSideRight &&
-                    subSideRight.style.display !== 'none' &&
-                    !patchRight;
-
-                // If we have patchRight, show the right panel
-                if (patchRight) {
-                    if (subSideRight) subSideRight.style.display = '';
-                    if (subDivider) subDivider.style.display = '';
+                // patchRight controls right panel visibility
+                if (subSideRight) {
+                    subSideRight.style.display = patchRight ? '' : 'none';
+                }
+                if (subDivider) {
+                    subDivider.style.display = patchRight ? '' : 'none';
                 }
 
-                // Update data-sub-state for CSS hover logic
-                if (widget) {
-                    const hasLeft = !!patchLeft;
-                    const hasRight = !!patchRight || origRightVisible;
-                    let state = '0';
-                    if (hasLeft && hasRight) state = '1';
-                    else if (!hasLeft && hasRight) state = '2';
+                // Update data-sub-state for CSS hover controls visibility:
+                //   '0' → only left controls shown on hover
+                //   '1' → both left + right controls shown on hover
+                //   '2' → both controls shown on hover (right-only mode)
+                //
+                // KEY: when patch controls at least one side, we manage the state.
+                // When BOTH are null (e.g. after returning to JA), we leave the
+                // attribute alone so the original engine's own state value is kept.
+                // This prevents us from overriding the original engine's '1' state
+                // (which shows right controls) with our '0'.
+                if (widget && (patchLeft || patchRight)) {
+                    let state = '1'; // default: show both controls when patch is active
+                    if (!patchLeft && patchRight) state = '2'; // right-only mode
                     widget.setAttribute('data-sub-state', state);
                 }
             }
@@ -1093,6 +1197,49 @@
             }
 
             // ----------------------------------------------------------------
+            // Helper: clear a managed panel's content and cue state
+            // ----------------------------------------------------------------
+            function clearPanel(side) {
+                const id = side === 'left' ? 'subtitle-container-left' : 'subtitle-container-right';
+                const ctr = document.getElementById(id);
+                if (ctr) {
+                    ctr.classList.remove(
+                        'rolling-up', 'target-normal', 'target-centered',
+                        'target-gap', 'target-empty', 'target-long',
+                        'sub-mode-normal', 'sub-mode-gap', 'sub-mode-empty',
+                        'sub-mode-long'
+                    );
+                    ctr.classList.add('sub-mode-empty');
+                    const c = ctr.querySelector('.current-sub');
+                    const n = ctr.querySelector('.next-sub');
+                    if (c) c.innerHTML = '';
+                    if (n) n.innerHTML = '';
+                }
+                if (side === 'left') { cuesLeft = null; lastCueLeft = null; }
+                else { cuesRight = null; lastCueRight = null; }
+            }
+
+            // ----------------------------------------------------------------
+            // Deactivate original engine on a side by dispatching a synthetic
+            // click with the bypass semaphore so our own handler ignores it.
+            // This stops the original JA/KO rAF from overwriting our containers.
+            // ----------------------------------------------------------------
+            function deactivateOriginalOnSide(targetSide) {
+                const btns = document.querySelectorAll(
+                    `.sub-btn[data-side="${targetSide}"].active`
+                );
+                btns.forEach(b => {
+                    if (ORIG_LANGS.has(b.dataset.lang)) {
+                        _bypassIntercept = true;
+                        b.dispatchEvent(
+                            new MouseEvent('click', { bubbles: true, cancelable: true })
+                        );
+                        // _bypassIntercept is reset inside onDocumentClick after use
+                    }
+                });
+            }
+
+            // ----------------------------------------------------------------
             // Click interceptor for non-ja/ko buttons
             // ----------------------------------------------------------------
             function onDocumentClick(e) {
@@ -1103,85 +1250,71 @@
                 const lang = btn.dataset.lang;
                 if (!side || !lang) return;
 
-                // Only intercept languages we manage (non-ja, non-ko)
+                // ── Bypass: synthetic click from deactivateOriginalOnSide ──
+                // Let the original engine handle it unmodified.
+                if (_bypassIntercept) {
+                    _bypassIntercept = false;
+                    return;  // no stopImmediatePropagation → original engine handles it
+                }
+
+                // ── JA / KO click: let original engine handle it ──
                 if (ORIG_LANGS.has(lang)) {
-                    // Let original handler run. After it finishes we sync our UI.
+                    // Before letting through: if we control this side, hand it back.
+                    // Clear our state so original engine can take over cleanly.
+                    if (side === 'left' && patchLeft) {
+                        clearPanel('left');
+                        patchLeft = null;
+                    } else if (side === 'right' && patchRight) {
+                        clearPanel('right');
+                        patchRight = null;
+                    }
+                    // Let original engine handle the click.
+                    // Sync layout + buttons after it finishes.
                     setTimeout(() => {
-                        // If original engine reset one of our panels, clear it
-                        // (this happens when original sets leftSubLang to ja/ko
-                        //  which may hide or show panels)
                         applyPatchLayout();
                         refreshBtnStates();
                     }, 80);
-                    return;
+                    return;  // do NOT stopImmediatePropagation
                 }
 
-                // Stop the original engine from handling this click
+                // ── ID / RO (or any non-JA) click: we handle it ──
                 e.stopImmediatePropagation();
 
-                // Deactivate any original engine (ja/ko) selection on the SAME side
-                // by finding the currently-active ja/ko button on that side and clicking it
-                // (which the original engine will handle via bubbling since we removed our stop)
-                function deactivateOriginalOnSide(targetSide) {
-                    const activeBtns = document.querySelectorAll(
-                        `.sub-btn[data-side="${targetSide}"].active`);
-                    activeBtns.forEach(b => {
-                        if (ORIG_LANGS.has(b.dataset.lang)) {
-                            // Dispatch a real click to let original engine deselect it
-                            b.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-                        }
-                    });
-                }
-
-
                 if (side === 'left') {
-                    // Toggle: click again to deselect
                     if (patchLeft === lang) {
+                        // Toggle off — re-activate original engine on this side
+                        clearPanel('left');
                         patchLeft = null;
-                        cuesLeft = null;
-                        // Clear the container
-                        const ctr = document.getElementById('subtitle-container-left');
-                        if (ctr) {
-                            const c = ctr.querySelector('.current-sub');
-                            const n = ctr.querySelector('.next-sub');
-                            if (c) c.innerHTML = '';
-                            if (n) n.innerHTML = '';
-                        }
                     } else {
-                        // Deactivate original engine on this side first
+                        // Deactivate original engine (JA/KO) on left so it stops
+                        // overwriting our container with JA text (ghost text bug)
                         deactivateOriginalOnSide('left');
                         patchLeft = lang;
-                        // If patchLeft === patchRight, clear right
+                        // If same lang was on right, clear right
                         if (patchLeft === patchRight) {
+                            clearPanel('right');
                             patchRight = null;
-                            cuesRight = null;
                         }
+                        // Reset cue tracker so animation fires from blank state
+                        lastCueLeft = { text: '' };
                         loadPanelSubtitle('left');
                     }
                 } else {
                     if (patchRight === lang) {
+                        // Toggle off
+                        clearPanel('right');
                         patchRight = null;
-                        cuesRight = null;
-                        const ctr = document.getElementById('subtitle-container-right');
-                        if (ctr) {
-                            const c = ctr.querySelector('.current-sub');
-                            const n = ctr.querySelector('.next-sub');
-                            if (c) c.innerHTML = '';
-                            if (n) n.innerHTML = '';
-                        }
-                        // Hide right panel if original engine also doesn't use it
-                        const subSideRight = document.getElementById('sub-side-right');
-                        const subDivider = document.getElementById('sub-divider');
-                        if (subSideRight) subSideRight.style.display = 'none';
-                        if (subDivider) subDivider.style.display = 'none';
                     } else {
-                        // Deactivate original engine on right side first
+                        // Deactivate original engine on right side
                         deactivateOriginalOnSide('right');
                         patchRight = lang;
+                        // If same lang was on left, clear left
                         if (patchRight === patchLeft) {
+                            clearPanel('left');
                             patchLeft = null;
-                            cuesLeft = null;
                         }
+                        // Reset cue tracker so animation fires from blank state
+                        lastCueRight = { text: '' };
                         loadPanelSubtitle('right');
                     }
                 }
@@ -1220,7 +1353,7 @@
                 // Watch for song changes
                 watchSongChanges();
 
-                console.log('[SubtitlePatch v2] Ready - supporting id, ro, and any other languages from data.json');
+                console.log('[SubtitlePatch v3] Ready - Bug fixes: animation, JA restore, controls visibility');
             }
 
             // Start after DOM is ready

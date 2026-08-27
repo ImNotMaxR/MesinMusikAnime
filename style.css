@@ -1049,6 +1049,30 @@ body.mirror-mode #subtitle-widget:not([data-sub-state="0"]):hover .sub-controls-
     filter: blur(0) !important;
 }
 
+/* ── Long subtitle mode ──
+   Used when current subtitle text exceeds the threshold (42 chars or multi-line).
+   Centers the main text and hides next-sub below the visible area so it
+   doesn't fight for space — font size stays unchanged. */
+.sub-mode-long .current-sub {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+    filter: blur(0);
+}
+
+.sub-mode-long .next-sub {
+    transform: translateY(120%) scale(0.75);
+    opacity: 0;
+    filter: blur(0.2vh);
+}
+
+/* Rolling-up animation target for long text:
+   next-sub slides up to the centered position */
+.sub-text-container.rolling-up.target-long .next-sub {
+    transform: translateY(-50%) scale(1) !important;
+    opacity: 1 !important;
+    filter: blur(0) !important;
+}
+
 #sub-divider {
     width: 1px;
     height: 60%;
